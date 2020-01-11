@@ -40,7 +40,7 @@ $(HUGO): ## Download the binary hugo
 
 
 dev: $(HUGO) ## Runs the dev server
-	hugo server -D
+	$(HUGO) server -D
 
 
 help: ## Show this help !
