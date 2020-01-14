@@ -1,6 +1,7 @@
 
 https://web.archive.org/web/20190129015755/http://marioncolomer.com/
 
+
 ```bash
 docker run --rm -it -v $PWD/websites:/websites hartator/wayback-machine-downloader http://marioncolomer.com
 ```
@@ -13,3 +14,5 @@ docker run --rm -it -v $PWD/websites:/websites hartator/wayback-machine-download
 | 09/01/2020 |  1h30 | je pars sur [Hugo](https://gohugo.io/), l'outil a l'air plus intéressant pour ce projet, écriture du `Makefile` pour tout automatiser |
 | 09/01/2020 |  45min | Je commence à importer le texte de quelques pages |
 | 10/01/2020 |  20min | fini l'import de texte |
+| 11/01/2020 |  10min | on lit de la doc sur le templating |
+| 13/01/2020 |  30min | Toujours sur l'apprentissage de Hugo |

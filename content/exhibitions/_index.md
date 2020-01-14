@@ -63,4 +63,3 @@ Hindustan Times, Chandigarh, « people art land » 30/09/08
 The Tribune, Chandigarh« building briges with brushes» 30/09/08
 Benikbhaskar, (hindi) Chandigarh , « the indian cultur as got a special prophet » 30/09/08
 Amarugala, (hindi) Chandigarh, « foreigner’s hand has the magic of indian art » 30/09/08
-

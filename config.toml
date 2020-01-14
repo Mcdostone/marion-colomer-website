@@ -1,3 +1,28 @@
-baseURL = "http://example.org/"
+baseURL = "marion-colomer.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Marion Colomer"
+theme = "tale"
+
+
+[params]
+  author = "Marion Colomer"
+  description = "Marion Colomer Painter artist based in Washington DC."
+
+
+[menu]
+  [[menu.main]]
+    name = "Portfolio"
+    url = "/portfolio"
+    weight = 1
+  [[menu.main]]
+    name = "Exhibitions"
+    url = "/exhibitions"
+    weight = 2
+  [[menu.main]]
+    name = "Biography"
+    url = "/biography"
+    weight = 3
+[[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 4
