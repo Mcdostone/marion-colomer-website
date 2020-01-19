@@ -1,19 +1,29 @@
-<head>
+<!doctype html>
+<html>
+  <head>
     <meta charset="utf-8">
-    <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:url" content="{{ .Site.Title }}">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:url" content="{{ page.title }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ "logo.png" | absURL }}">
-    <meta property="og:site_name" content="Minecraft">
+    <meta property="og:image" content="{{ }}">
+    <meta property="og:site_name" content="Marion Colomer">
     <meta name="theme-color" content="#FFF"/>
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-    <meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0">
     <link href="{{ "logo.png" | absURL }}" rel="icon" sizes="128x128">
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
-    <title>{{ .Site.Title }}</title>
-</head>
+    <title>{{ page.title }}</title>
+  </head>
+  
+  </head>
+  <body>
+    {% include navigation.html %}
+    {{ content }}
+  </body>
+</html>

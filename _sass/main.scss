@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Avenir,
+    Avenir Next,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif
+}
+
+
+main {
+  margin: auto auto;
+  display: flex;
+}
+
+header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+
+.splashscreen {
+  height: calc((100vh - 400px));
+  margin: auto auto;
+}
+
+.homepage {
+
+}
+
+.splashscreen img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  float: left;
+  object-fit: cover;
+  box-shadow:
+  0 10px 15px -3px rgba(199, 166, 147, .4),
+  0 4px 6px -2px rgba(128, 79, 54, .3)
+}
+
+
+
+
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+header nav ul li:last-child {
+  margin-right: 0;
+}
+
+
+
+footer {
+  display: none;
+}
+
+
+
+
+
+.biography {
+  width: 50%;
+  margin: 0 auto
+}

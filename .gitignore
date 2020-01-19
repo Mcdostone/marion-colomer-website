@@ -1,4 +1,6 @@
-hugo
 .DS_Store
 websites
-public
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
