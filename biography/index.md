@@ -1,6 +1,0 @@
-
-    Marion Colomer, a French painter born in 1983, has been based in Washington, DC since 2013. She has lived in Paris, New York, and New Delhi, and has had numerous exhibitions in France and India. Colomer graduated from Paris’ Ecole Nationale Superieure des Beaux-arts in 2008 with a Masters of Fine Arts specialized in paintings. She is currently working as a painting conservator at the US Capitol, restoring the Brumidi Corridors murals. Most recently Colomer was named an S&R Foundation fellow at the residency program for DC artists, housed at the Fillmore School in Georgetown.
-
-    In her artistic endeavor Marion Colomer looks into how figurative paintings can still behold an interpretative vision of the world.
-    
-    Colomer’s work is rooted in the question of intimacy portraiture, treated with sensuality and turned towards the “other.” Questioning identity, intimacy or womanhood. Colomer’s paintings reflect an interest in the hand, know how and traditionally female crafts, in which ornamentation and beauty are rendered in layers of bitter and acerbic meaning. Her paintings often uses oxymoron’s, balancing, oscillating in constant tension between the presence of the absence.    
