@@ -1,0 +1,17 @@
+- name: Birds
+  year: 2016
+  image: /assets/images/1.jpg
+  link: /portfolio/birds
+- name: Melancholia
+  year: 2016
+  link: /portfolio/melancholia
+  image: /assets/images/1.jpg
+- name: Kaleidoscope  
+  year: 2013
+  image: /assets/images/1.jpg
+  link: /portfolio/kaleidoscope
+
+- name: Portraits And Embroidery
+  year: 2010
+  image: /assets/images/1.jpg
+  link: /portfolio/portraits-and-embroidery

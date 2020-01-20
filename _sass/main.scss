@@ -19,7 +19,6 @@ body {
 
 main {
   margin: auto auto;
-  display: flex;
 }
 
 header {
@@ -36,7 +35,7 @@ header {
 }
 
 .homepage {
-
+    display: flex;
 }
 
 .splashscreen img {
@@ -89,4 +88,28 @@ footer {
 .biography {
   width: 50%;
   margin: 0 auto
+}
+
+
+.biography p {
+    font-size: 0.875rem;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+.portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 auto;
+}
+
+.portfolio-list a {
+    width: 30%;
+    padding-bottom: 30%;
+}
+
+.portfolio-list a img {
+    object-fit: cover;
 }

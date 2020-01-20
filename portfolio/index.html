@@ -1,0 +1,15 @@
+---
+layout: default
+title: About
+---
+
+<main class="portfolio-list">
+
+    {% for item in site.data.portfolio %}
+        <a href="{{item.link }}">
+            <img src="{{ item.image }}" alt="">
+        </a>
+    {% endfor %}
+    
+</main>
+
