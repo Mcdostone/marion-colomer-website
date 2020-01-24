@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding: 0;
+  background: rgb(13, 13, 13);
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -14,6 +16,10 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif
+}
+
+* {
+    box-sizing: border-box;
 }
 
 
@@ -137,4 +143,73 @@ footer {
 .portfolio-list a img {
   width: 100%;
   object-fit: cover;
+}
+
+.pouet {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 50%;
+    top: 0;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    padding: 0 0 4rem 0;
+    background: rgb(13, 13, 13);
+    color: #454545;
+}
+
+.pouet-content {
+    
+    position: relative;
+    font-size: 0.875rem;
+    margin: auto;
+    padding: 1rem 2rem;
+    line-height: 2;
+    max-width: 512px;
+    flex: 1;
+}
+
+.pouet-header {
+    // position: fixed;
+    top: 0;
+    width: 50%;
+    right: 0;
+    z-index: 5;
+    padding: 4rem;
+    
+    background: linear-gradient(to bottom, rgb(13, 13, 13) 70%, transparent  100%); 
+}
+
+.pouet h1 {
+    max-width: 500px;
+    margin: auto;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+
+.painting {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+}
+
+.painting img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pouet-content *::-moz-selection,
+.pouet-content *::selection {
+    background: rgb(49, 49, 49);
+    color: rgb(2,2,2);
+}
+
+
+.pouet-content p + p {
+    margin-top: 1.75rem;
 }
