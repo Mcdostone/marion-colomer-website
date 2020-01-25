@@ -151,10 +151,10 @@ footer {
     margin-left: auto;
     width: 50%;
     top: 0;
-    height: 100vh;
+    min-height: 100vh;
     bottom: 0;
     right: 0;
-    padding: 0 0 4rem 0;
+    padding: 0;
     background: rgb(13, 13, 13);
     color: #454545;
 }
@@ -208,7 +208,6 @@ footer {
     background: rgb(49, 49, 49);
     color: rgb(2,2,2);
 }
-
 
 .pouet-content p + p {
     margin-top: 1.75rem;
