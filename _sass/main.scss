@@ -1,6 +1,12 @@
 body {
+
+
+    --gray: #454545;
+    --border-size: 2rem;
+    
   margin: 0;
   padding: 0;
+  padding: var(--border-size);
   background: rgb(13, 13, 13);
   font-family:
     -apple-system,
@@ -27,28 +33,6 @@ main {
   margin: auto auto;
 }
 
-header {
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  flex-direction: column;
-}
-
-header nav a {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 0.25rem;
-    transition: 0.2s ease border-color;
-}
-
-header nav a.current,
-header nav a:hover {
-    border-bottom: 1px solid black;
-    /*transition: border-color 0.2s linear;*/
-}
-
 .splashscreen {
   height: calc((100vh - 400px));
   margin: auto auto;
@@ -70,30 +54,6 @@ header nav a:hover {
 }
 
 
-
-
-.logo {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-}
-
-
-header nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-header nav ul li:last-child {
-  margin-right: 0;
-}
 
 
 
@@ -191,10 +151,10 @@ footer {
 
 
 .painting {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    //top: var(--border-size);
+    // bottom: var(--border-size);
+    // left: var(--border-size);
     width: 50%;
 }
 
