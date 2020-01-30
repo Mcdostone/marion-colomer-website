@@ -1,33 +1,19 @@
 body {
+  --gray: #454545;
+  --border-size: 2rem;
 
-
-    --gray: #454545;
-    --border-size: 2rem;
-    
   margin: 0;
   padding: 0;
   padding: var(--border-size);
   background: rgb(13, 13, 13);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    Avenir,
-    Avenir Next,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, Avenir, Avenir Next, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 main {
   margin: auto auto;
@@ -39,7 +25,7 @@ main {
 }
 
 .homepage {
-    display: flex;
+  display: flex;
 }
 
 .splashscreen img {
@@ -48,56 +34,34 @@ main {
   margin: 0;
   float: left;
   object-fit: cover;
-  box-shadow:
-  0 10px 15px -3px rgba(199, 166, 147, .4),
-  0 4px 6px -2px rgba(128, 79, 54, .3)
+  box-shadow: 0 10px 15px -3px rgba(199, 166, 147, 0.4),
+    0 4px 6px -2px rgba(128, 79, 54, 0.3);
 }
-
-
-
-
 
 footer {
-    color: gray;
-    display: flex;
-    justify-content: center;
-    font-size: 0.875rem;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  font-size: 0.875rem;
 }
-
-
-
-
-
-.biography {
-  width: 50%;
-  margin: 0 auto
-}
-
-
-.biography p {
-    font-size: 0.875rem;
-    text-align: justify;
-    line-height: 1.5;
-}
-
 
 .portfolio-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 0 auto;
-    width: 80%;
-    grid-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+  width: 80%;
+  grid-gap: 2rem;
 }
 
 .portfolio-list a {
-    width: 25vw;
-    height: 25vw;
-    overflow: hidden;
+  width: 25vw;
+  height: 25vw;
+  overflow: hidden;
 }
 
-.portfolio-list a:nth-child(odd) { 
-    justify-self: flex-end;
+.portfolio-list a:nth-child(odd) {
+  justify-self: flex-end;
 }
 
 .portfolio-list a img {
@@ -106,69 +70,67 @@ footer {
 }
 
 .pouet {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    width: 50%;
-    top: 0;
-    min-height: 100vh;
-    bottom: 0;
-    right: 0;
-    padding: 0;
-    background: rgb(13, 13, 13);
-    color: #454545;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 50%;
+  top: 0;
+  min-height: 100vh;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  background: rgb(13, 13, 13);
+  color: #454545;
 }
 
 .pouet-content {
-    
-    position: relative;
-    font-size: 0.875rem;
-    margin: auto;
-    padding: 1rem 2rem;
-    line-height: 2;
-    max-width: 512px;
-    flex: 1;
+  position: relative;
+  font-size: 0.875rem;
+  margin: auto;
+  padding: 1rem 2rem;
+  line-height: 2;
+  max-width: 512px;
+  flex: 1;
 }
 
 .pouet-header {
-    // position: fixed;
-    top: 0;
-    width: 50%;
-    right: 0;
-    z-index: 5;
-    padding: 4rem;
-    
-    background: linear-gradient(to bottom, rgb(13, 13, 13) 70%, transparent  100%); 
+  // position: fixed;
+  top: 0;
+  width: 50%;
+  right: 0;
+  z-index: 5;
+  padding: 4rem;
+  background: linear-gradient(to bottom, rgb(13, 13, 13) 70%, transparent 100%);
 }
 
 .pouet h1 {
-    max-width: 500px;
-    margin: auto;
-    color: white;
-    text-transform: capitalize;
-    margin-bottom: 2rem;
+  max-width: 500px;
+  margin: auto;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
 }
 
-
 .painting {
-    position: relative;
-    //top: var(--border-size);
-    // bottom: var(--border-size);
-    // left: var(--border-size);
-    width: 50%;
+  position: relative;
+  //top: var(--border-size);
+  // bottom: var(--border-size);
+  // left: var(--border-size);
+  width: 50%;
 }
 
 .painting img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 .pouet-content *::-moz-selection,
 .pouet-content *::selection {
-    background: rgb(49, 49, 49);
-    color: rgb(2,2,2);
+  background: rgb(49, 49, 49);
+  color: rgb(2, 2, 2);
 }
 
 .pouet-content p + p {
-    margin-top: 1.75rem;
+  margin-top: 1.75rem;
 }

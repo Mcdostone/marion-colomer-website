@@ -1,0 +1,49 @@
+{
+    "name": "marion-colomer-website",
+    "version": "1.0.0",
+    "description": "https://web.archive.org/web/20190129015755/http://marioncolomer.com/",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Mcdostone/marion-colomer-website.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Mcdostone/marion-colomer-website/issues"
+    },
+    "homepage": "https://github.com/Mcdostone/marion-colomer-website#readme",
+    "devDependencies": {
+        "husky": "^4.2.1",
+        "lint-staged": "^10.0.4",
+        "prettier": "^1.19.1",
+        "stylelint": "^13.0.0",
+        "stylelint-config-standard": "^19.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{scss}": [
+            "stylelint",
+            "git add"
+        ],
+        "*.{css,scss,yml,md,json}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "stylelint": {
+        "extends": "stylelint-config-standard",
+        "rules": {
+            "no-descending-specificity": null,
+            "declaration-block-trailing-semicolon": "never",
+            "declaration-block-no-redundant-longhand-properties": true
+        }
+    }
+}
