@@ -1,0 +1,42 @@
+.work-description {
+  position: relative;
+  font-size: 0.875rem;
+  color: #454545;
+  margin: auto;
+  max-width: calc(var(--container-width) / 2);
+  line-height: 2;
+}
+
+.pouet-header {
+  // position: fixed;
+  top: 0;
+  width: 50%;
+  right: 0;
+  z-index: 5;
+  padding: 4rem;
+  background: linear-gradient(to bottom, rgb(13, 13, 13) 70%, transparent 100%);
+}
+
+.work-description h1 {
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.painting {
+  position: relative;
+  //top: var(--border-size);
+  // bottom: var(--border-size);
+  // left: var(--border-size);
+  width: 50%;
+}
+
+.painting img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-description p + p {
+  margin-top: 1.75rem;
+}

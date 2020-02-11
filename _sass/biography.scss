@@ -1,8 +1,14 @@
 .biography {
   display: grid;
+  max-width: calc(var(--container-width) + 6rem);
+  max-width: var(--container-width);
   grid-template-columns: 2fr 1fr;
-  width: 66%;
+  width: 100%;
   grid-gap: 2rem;
+}
+
+.biography p:first-child {
+  margin-top: 0;
 }
 
 .biography p {
@@ -32,6 +38,7 @@
   width: 100%;
   border: 1px solid rgb(32, 32, 32);
   animation: slideUp 4s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: forwards;
   opacity: 0;
   animation-delay: 0.5s;
 }

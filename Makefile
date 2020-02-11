@@ -10,6 +10,9 @@ node_modules: package.json
 dev: vendor node_modules ## Runs the dev server
 	bundle exec jekyll serve
 
+build: vendor
+	bundle exec jekyll build
+
 clean:
 	bundle exec jekyll clean
 

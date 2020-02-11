@@ -1,5 +1,4 @@
 <div class="controls">
-
     {% for item in site.data.portfolio | sort: "year" %}
         {% if page.url contains item.link %}
             {% assign index = forloop.index0 %}
@@ -15,9 +14,5 @@
             <a href="{{ site.data.portfolio[previous].link }}" class="previous">{{ site.data.portfolio[previous].name }} / {{ site.data.portfolio[previous].year }}</a>
             <a href="{{ site.data.portfolio[next].link }}" class="next">{{ site.data.portfolio[next].name }} / {{ site.data.portfolio[next].year }}</a>
         {% endif %}
-    {% endfor %}
-
-
-    
-    
+    {% endfor %}    
 </div>

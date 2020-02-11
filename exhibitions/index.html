@@ -4,5 +4,12 @@ title: About
 ---
 
 <main class="exhibitions">
-    Voila
+    <h1>Exhibitions</h1>
+    <ul>
+        {% for exhibition in site.data.exhibitions %}
+          <li>
+            <h2>{{ exhibition.date }}</h2>
+          </li>
+        {% endfor %}
+      </ul>
 </main>
