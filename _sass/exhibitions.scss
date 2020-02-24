@@ -1,3 +1,44 @@
 .exhibitions {
   max-width: var(--container-width);
 }
+
+.exhibitions h1 {
+  color: white;
+}
+
+.exhibitions ul {
+  list-style-type: none;
+}
+
+.press li,
+.exhibitions li {
+  color: white;
+}
+
+.exhibition-description {
+}
+
+.website:hover {
+  transition: 0.2s;
+  color: white;
+}
+
+.exhibitions li > * {
+  margin: 0;
+}
+
+.press,
+.exhibitions li > * + * {
+  margin-top: 0.25rem;
+}
+
+.website,
+.location {
+  transition: 0.2s;
+  color: #454545;
+  font-size: 0.75rem;
+}
+
+.exhibitions li + li {
+  margin-top: 1rem;
+}

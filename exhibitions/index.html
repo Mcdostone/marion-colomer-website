@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: Exhibitions
 ---
 
 <main class="exhibitions">
@@ -8,8 +8,23 @@ title: About
     <ul>
         {% for exhibition in site.data.exhibitions %}
           <li>
-            <h2>{{ exhibition.date }}</h2>
+            <p class="description">{{ exhibition.description }}</p>
+            <p class="location">{{ exhibition.location }}</p>
+            <a class="website" rel="noopener" target="_blank" href="{{ exhibition.website }}">{{ exhibition.website }}</a>
           </li>
         {% endfor %}
       </ul>
+
+
+      <h1>Press</h1>
+      <ul>
+          {% for press in site.data.press %}
+            <li>
+              <p class="description">{{ press.title }}</p>
+              <p class="location">{{ press.location }}</p>
+              <a class="website" href="{{ press.website }}">{{ press.website }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+
 </main>
