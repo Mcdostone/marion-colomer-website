@@ -35,8 +35,10 @@
 
 - title: Balthazar Magazine
   date: 01/06/2012 # June 2012
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/Balthazar-1.pdf
+  local: true
+  link: 2012-06-01-balthazar.pdf
   location: Paris, France
+
 - title: Art for breakfast, « Marion Colomer s’installe à la Wide Painting gallery »
   link: http://www.dailymotion.com/video/xl13gh_marion-colomer-s-expose-a-la-wide-painting-gallery_creation
   date: 11/09/2011 # 11th September 2011
@@ -80,7 +82,8 @@
 
 - title: Times out magazine, Delhi, « all the glitters » 2 pages from
   date: 07/03/2008 # 7th-14th March 2008
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/All-that-Glitters-2008.pdf
+  link: 2008-03-07-all-that-glitters.pdf
+  local: true
   location: New Delhi, India
 
 - title: Hindustan times metro now, Delhi, « picture this! »
@@ -90,12 +93,14 @@
 - title: Indian express, Delhi, « face Book , Royalty and Indian designers come alive in this French artist’s gallery of portraits »
   date: 20/03/2008 # 20st March 2008
   location: New Delhi, India
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/Indian-Express-march-20th-2008.pdf
+  local: true
+  link: 2018-03-20-indian-express.pdf
 
 - title: Times of India Delhi, « painting the Indian party » 2 pages,
   date: 07/12/2008 # 7th December 2008
   location: New Delhi, India
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/times-of-india-december-7th-2008.pdf
+  local: true
+  link: 2018-12-07-times-of-india.pdf
 
 - title: Times of India, Baroda, « royal brush »
   date: 09/12/2008 # 9th December 2008
@@ -114,23 +119,25 @@
   location: Chandigarh, India
 
 - title: India Express, Chandigarh, «woven portraits »
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/15-SCN_Woven-Portriats-The-Indian-Express-24-Sep-2008.pdf
+  local: true
+  link: 2008-09-24-woven-portraits.pdf
   date: 24/09/2008 # 24th September 2008
   location: Chandigarh, India
 
 - title: Hindustan Times, Chandigarh, « color of Colomer »
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/16-SCN_Colour-me-Colomer-Hindustan-Times-24-Sep-2008.pdf
+  local: true
+  link: 2008-09-24-colour-me-colomer.pdf
   date: 24/09/2008 # 24th September 2008
   location: Chandigarh, India
 
 - title: Times of India, Chandigarh« snaps shoot of India now and then »
   date: 24/09/2008 # 24th September 2008
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/Indian-Express-march-20th-2008.pdf
   location: Chandigarh, India
 
 - title: Benikbhaskar, (hindi) Chandigarh,  « French artist Indian work »
   date: 24/09/2008 # 24th September 2008
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/18-SCN_Hindi-article-24-Sep-2008.pdf
+  local: true
+  link: 2008-09-24-hindi-article.pdf
   location: Chandigarh, India
 
 - title: Amarugala, (hindi) Chandigarh, « French painting, painting show »
@@ -139,22 +146,26 @@
 
 - title: The Tribune, Chandigarh, « French connection »
   date: 24/09/2008 # 24th September 2008
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/20-SCN_French-connection-The-Tribune-24-Sep-2008.pdf
+  local: true
+  link: 2008-09-24-french-connection.pdf
   location: Chandigarh, India
 
 - title: Indian Express, Chandigarh, « portrait of an artist »
   date: 30/09/2008 # 30st September 2008
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/21-SCN_Portriat-of-an-Artist-The-Indian-Express-30-sep-2008.pdf
+  local: true
+  link: 2008-09-30-portrait-of-an-artist.pdf
   location: Chandigarh, India
 
 - title: Hindustan Times, Chandigarh, « people art land »
   date: 30/09/2008 # 30st September 2008
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/22-SCN_Peoples-Art-Land-Hindustan-Times-30-Sep-2008.pdf
+  local: true
+  link: 2008-09-30-peoples-art-land.pdf
   location: Chandigarh, India
 
 - title: The Tribune, Chandigarh« building bridges with brushes»
   date: 30/09/2008 # 30st September 2008
-  link: http://marioncolomer.com/wp-content/uploads/2017/01/23-SCN_Building-bridges-with-brushes-The-Tribune-30-Sep-2008.pdf
+  local: true
+  link: 2008-09-30-building-bridges-with-brushes.pdf
   location: Chandigarh, India
 
 - title: Benikbhaskar, (hindi) Chandigarh, « the Indian culture as got a special prophet »

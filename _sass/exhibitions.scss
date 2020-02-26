@@ -1,5 +1,15 @@
 .exhibitions {
   max-width: var(--container-width);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.exhibitions h2 {
+  margin-top: 3rem;
+}
+
+.exhibitions h2:first-child {
+  margin-top: 0;
 }
 
 .per-year {
@@ -13,7 +23,7 @@
 }
 
 .per-year + .per-year {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .exhibitions h1 {

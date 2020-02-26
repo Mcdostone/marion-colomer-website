@@ -37,7 +37,16 @@ title: Exhibitions
                 <li>
                     <p class="description">{{ press.title }}</p>
                     <p class="location">{{ press.location }}</p>
-                    <a class="website" rel="noopener" target="_blank" href="{{ press.link }}">{{ press.link }}</a>
+                    {% if press.local %}
+                    <a class="website" rel="noopener" target="_blank" href="{{ press.link | prepend: "/assets/uploads/" }}">
+                        {{ press.link | prepend: "/assets/uploads/" | absolute_url }}
+                    </a>
+                        {% else %}
+                        <a class="website" rel="noopener" target="_blank" href="{{ press.link}}">
+                            {{ press.link }}
+                        </a>
+                        {% endif %}
+                    </a>
                 </li>
             {% endfor %}
         </ul>
