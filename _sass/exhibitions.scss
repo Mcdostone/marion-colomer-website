@@ -67,3 +67,9 @@
 .exhibitions li + li {
   margin-top: 0.75rem;
 }
+
+@media (max-width: 600px) {
+  .exhibitions {
+    padding: 0;
+  }
+}

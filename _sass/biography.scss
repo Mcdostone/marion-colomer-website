@@ -11,6 +11,11 @@
   margin-top: 0;
 }
 
+.biography .portrait,
+.biography article {
+  align-self: center;
+}
+
 .biography p {
   color: var(--gray);
   font-size: 0.875rem;
@@ -36,9 +41,24 @@
 
 .portrait {
   width: 100%;
-  border: 1px solid rgb(32, 32, 32);
-  animation: slideUp 4s cubic-bezier(0.23, 1, 0.32, 1);
-  animation-fill-mode: forwards;
-  opacity: 0;
-  animation-delay: 0.5s;
+  // animation: slideUp 4s cubic-bezier(0.23, 1, 0.32, 1);
+  // animation-fill-mode: forwards;
+}
+
+@media (max-width: 800px) {
+  .biography {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .portrait {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .portrait {
+    width: 100%;
+  }
 }

@@ -18,7 +18,7 @@
 }
 
 .work-description h1 {
-  color: white;
+  color: black;
   text-transform: capitalize;
   margin-bottom: 2rem;
 }
@@ -39,4 +39,10 @@
 
 .work-description p + p {
   margin-top: 1.75rem;
+}
+
+@media (max-width: 600px) {
+  .painting {
+    width: 100%;
+  }
 }

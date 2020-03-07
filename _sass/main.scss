@@ -10,6 +10,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Avenir, Avenir Next, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 * {
@@ -18,7 +21,7 @@ body {
 
 main {
   margin: auto auto;
-  padding: 2rem 0;
+  flex: 1;
 }
 
 .splashscreen {

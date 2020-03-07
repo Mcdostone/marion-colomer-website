@@ -2,8 +2,12 @@
 layout: default
 title: Home
 ---
-<main class="homepage">
+<main class="home">
     <div class="splashscreen">
-        <img src="/assets/images/1.jpg" alt="">
+        {% for item in site.data.portfolio %}
+        <a href="{{item.link }}">
+            <img src="{{ item.image }}" alt="">
+        </a>
+    {% endfor %}
     </div>
 </main>
