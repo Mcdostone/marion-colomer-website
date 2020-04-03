@@ -3,11 +3,17 @@ layout: default
 title: Home
 ---
 <main class="home">
-    <div class="splashscreen">
-        {% for item in site.data.portfolio %}
-        <a href="{{item.link }}">
-            <img src="{{ item.image }}" alt="">
-        </a>
-    {% endfor %}
+
+    <div id="splashscreen">
+            {% for item in site.data.portfolio %}
+            <div class="slide" href="{{item.link }}">
+                <img src="{{ item.image }}" alt="">
+                <div>
+                    {{ item.name }}
+                    <p class="year">{{ item.year }}</p>
+                    <a class="button">Discover</p>
+                </div>
+            </a>
+                {% endfor %}
     </div>
 </main>
