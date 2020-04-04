@@ -6,7 +6,7 @@ title: Exhibitions
 
 <main class="exhibitions">
 
-    <h2>Exhibitions</h2>
+    <h2 id="exhibitions">Exhibitions</h2>
     {% assign exhibitionsByDate = site.data.exhibitions | group_by_exp:"exhibition", "exhibition.date.from | date: '%Y'" %}
     {% for date in exhibitionsByDate %}
     <div class="per-year">
@@ -25,7 +25,7 @@ title: Exhibitions
     </div>
     {% endfor %}
 
-    <h2>Press</h2>
+    <h2 id="press">Press</h2>
     {% assign PressByDate = site.data.press | group_by_exp:"press", "press.date | date: '%Y'" %}
     {% for date in PressByDate %}
     <div class="per-year">

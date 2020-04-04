@@ -2,15 +2,15 @@
   year: 2010
   image: /assets/images/portraits-and-embroidery/1.jpg
   link: /portfolio/portraits-and-embroidery
-#- name: Kaleidoscope
-#  year: 2013
-#  image: /assets/images/kaleidoscope/1.jpg
-#  link: /portfolio/kaleidoscope
-#- name: Melancholia
-#  year: 2016
-#  link: /portfolio/melancholia
-#  image: /assets/images/melancholia/1.jpg
-#- name: Birds
-#  year: 2016
-#  image: /assets/images/birds/1.jpg
-#  link: /portfolio/birds
+- name: Kaleidoscope
+  year: 2013
+  image: /assets/images/kaleidoscope/1.jpg
+  link: /portfolio/kaleidoscope
+- name: Melancholia
+  year: 2016
+  link: /portfolio/melancholia
+  image: /assets/images/melancholia/1.jpg
+- name: Birds
+  year: 2016
+  image: /assets/images/birds/1.jpg
+  link: /portfolio/birds

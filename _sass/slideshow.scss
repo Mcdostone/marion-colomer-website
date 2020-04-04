@@ -1,3 +1,49 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  width: min-content;
+  text-decoration: none;
+  position: relative;
+  margin: 0;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border: 1.5px solid black;
+  transition: transform 0.3s ease;
+}
+
+.button > span {
+  padding: 0.75em 2.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: black;
+  padding: 0.75em 2em;
+  height: 3em;
+  font-family: scandia-web, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  border: 1.5px solid black;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transform: translate(-4px, -4px);
+  width: 100%;
+}
+
 #slideshow {
   overflow: hidden;
   height: 510px;
@@ -12,6 +58,11 @@
 
 .slide {
   float: left;
+}
+
+#splashscreen .slide .button {
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 
 #splashscreen {
@@ -29,23 +80,38 @@
   height: 100%;
 }
 
-#splashscreen .slide div {
+#splashscreen .title {
+  margin: 0;
+}
+
+#splashscreen .slide > div {
   padding: 2rem;
+  flex: 1;
+}
+
+#splashscreen .slide + .slide {
+  margin-top: 4rem;
+}
+
+#splashscreen .slide div h2 {
   font-size: 3.5rem;
   font-weight: 100;
-  font-family: "Palatino", "Times New Roman";
+  text-align: center;
   color: #1a1a1a;
 }
 
 #splashscreen .slide {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
 }
 
 #splashscreen .slide .year {
   font-size: 1rem;
-  margin-left: auto;
+  font-weight: 100;
+  text-align: center;
+  margin-left: 0;
 }
 
 #splashscreen img {
