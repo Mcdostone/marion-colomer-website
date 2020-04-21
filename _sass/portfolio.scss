@@ -1,9 +1,13 @@
+.work {
+  width: 100%;
+  max-width: calc(var(--container-width));
+}
+
 .work-description {
   position: relative;
   font-size: 0.875rem;
   color: #454545;
   margin: auto;
-  max-width: calc(var(--container-width) / 2);
   line-height: 2;
 }
 
@@ -19,22 +23,33 @@
 
 .work-description h1 {
   color: black;
+  margin-bottom: 0;
   text-transform: capitalize;
+}
+
+.work-description h2 {
+  margin: 0;
   margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 .painting {
+  display: flex;
   position: relative;
   //top: var(--border-size);
+  height: 500px;
+  max-height: 60vh;
   // bottom: var(--border-size);
   // left: var(--border-size);
-  width: 50%;
 }
 
 .painting img {
-  width: 100%;
+  margin: 0 auto;
   height: 100%;
-  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  object-fit: contain;
 }
 
 .work-description p + p {
@@ -44,5 +59,6 @@
 @media (max-width: 600px) {
   .painting {
     width: 100%;
+    height: auto;
   }
 }
