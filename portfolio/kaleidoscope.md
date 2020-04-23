@@ -1,11 +1,8 @@
 ---
 layout: work
 title: Kaleidoscope
+index: 1
 ---
-
-# Kaleidoscope
-
-## — 2020
 
 The portraits are intended to be displayed in an installation. I would like to build a circus tent in which the visitor would enter. There it will be dark. They would walk on a path of diffused light. They would be guided to the center of the tent where a coin machine awaits. Whilst walking, the visitor would realize that they are treading on a moving image: a video of an Indian woman sweeping the floor. They would hear the repeated noise of broom scraping the floor.
 

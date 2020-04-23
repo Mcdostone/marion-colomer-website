@@ -2,12 +2,18 @@
 layout: default
 ---
 
-<main class="work">
+{% if page.index %}
+    {% assign item = site.data.portfolio[page.index] %}
+    <main class="work">
     <div class="painting">
-        <img src="/assets/images/melancholia/1.jpg" alt="">
+        <img src="{{ item.images | first }}" alt="">
     </div>
     <div class="work-description">
+
+    <h1>{{ item.name }}</h1>
+    <h2>—  {{ item.year }}  —</h1>
         {{ content }}
         {% include controls.html %}
     </div>    
 </main>
+{% endif %}

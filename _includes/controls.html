@@ -5,7 +5,7 @@
             {% assign size = site.data.portfolio | size %}
             {% assign previous = index | minus: 1 %}
             {% assign next = index | plus: 1 %}
-            {% if previous == 0 %}
+            {% if previous == -1 %}
                 {% assign previous = size | minus: 1 %}
             {% endif %}
             {% if next == size %}

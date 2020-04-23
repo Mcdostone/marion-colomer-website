@@ -21,6 +21,11 @@
   background: linear-gradient(to bottom, rgb(13, 13, 13) 70%, transparent 100%);
 }
 
+.work-description h2,
+.work-description h1 {
+  text-align: center;
+}
+
 .work-description h1 {
   color: black;
   margin-bottom: 0;
@@ -37,11 +42,10 @@
 .painting {
   display: flex;
   position: relative;
-  //top: var(--border-size);
+
   height: 500px;
-  max-height: 60vh;
-  // bottom: var(--border-size);
-  // left: var(--border-size);
+  max-height: 66vh;
+  margin: 2rem 0;
 }
 
 .painting img {
