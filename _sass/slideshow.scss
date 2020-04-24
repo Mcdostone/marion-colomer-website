@@ -5,46 +5,6 @@
   align-items: center;
 }
 
-.button {
-  display: flex;
-  width: min-content;
-  text-decoration: none;
-  position: relative;
-  margin: 0;
-}
-
-// .button::before {
-//   content: "";
-//   position: absolute;
-//   z-index: 1;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background: #fff;
-//   border: 1.5px solid black;
-//   transition: transform 0.3s ease;
-// }
-
-.button > span {
-  padding: 0.75em 2.25em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  background: black;
-  padding: 0.75em 2em;
-  height: 3em;
-  font-family: scandia-web, sans-serif;
-  font-weight: 500;
-  color: #fff;
-  border: 1.5px solid black;
-  text-align: center;
-  transition: transform 0.3s ease;
-  transform: translate(-4px, -4px);
-  width: 100%;
-}
-
 #slideshow {
   overflow: hidden;
   height: 510px;
@@ -66,6 +26,7 @@
   margin-top: 2rem;
 }
 
+/*
 #splashscreen {
   // position: absolute;
   // top: 0;
@@ -132,3 +93,5 @@
     width: 100%;
   }
 }
+
+*/

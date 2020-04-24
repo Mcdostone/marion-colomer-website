@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: serie
 title: Kaleidoscope
 index: 1
 ---

@@ -27,22 +27,8 @@
   color: white;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .portrait {
   width: 100%;
-  // animation: slideUp 4s cubic-bezier(0.23, 1, 0.32, 1);
-  // animation-fill-mode: forwards;
 }
 
 @media (max-width: 800px) {

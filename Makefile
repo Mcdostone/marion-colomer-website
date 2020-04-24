@@ -1,14 +1,17 @@
 .DEFAULT_GOAL=help
-.PHONY: dev help
+.PHONY: dev help clean build
 
 vendor: 
-	bundle install --path vendor/bundle
+	bundle config set path vendor/bundle
+	bundle install
 
 node_modules: package.json
 	npm install
 
 dev: vendor node_modules ## Runs the dev server
 	bundle exec jekyll serve
+
+_site: build
 
 build: vendor
 	bundle exec jekyll build

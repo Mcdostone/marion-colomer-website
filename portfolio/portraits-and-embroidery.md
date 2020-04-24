@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: serie
 title: Portraits and Embroidery
 index: 0
 ---

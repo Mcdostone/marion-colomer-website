@@ -13,6 +13,11 @@
   link: /portfolio/melancholia
   images:
     - /assets/images/melancholia/1.jpg
+  extra_links:
+    - name: Catalog
+      link: /assets/uploads/melancholia-catalog.pdf
+    - name: Press Release
+      link: /assets/uploads/melancholia-press-release.pdf
 - name: Birds
   year: 2016
   images:

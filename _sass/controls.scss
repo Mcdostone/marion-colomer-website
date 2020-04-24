@@ -9,13 +9,16 @@
 
 .controls a {
   color: var(--gray);
+  color: black;
   text-decoration: none;
   position: relative;
   padding-top: 1.25rem;
+  opacity: 0.5;
 }
 
 .controls a:hover {
-  transition: color 0.2s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .controls a::before {
@@ -29,7 +32,7 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 16px;
-  background: var(--gray);
+  background-color: black;
   transition: 0.25s ease-in-out;
 }
 

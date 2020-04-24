@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: serie
 title: Melancholia
 index: 2
 ---

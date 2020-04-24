@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: serie
 title: Birds
 index: 3
 ---

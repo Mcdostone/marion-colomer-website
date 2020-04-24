@@ -2,21 +2,19 @@
 layout: default
 title: Home
 ---
-<main class="home">
-    <div id="splashscreen">
-        {% for item in site.data.portfolio %}
-            <div class="slide">
-                <a class="" href="{{ item.link }}">
-                    <img src="{{ item.images | first }}" alt="">
-                </a>
-                <div>
-                    <h2 class="title">{{ item.name }}</h2>
-                    <div class="year">{{ item.year }}</div>
-                    <a class="button" href="{{ item.link }}">
-                        <span>Discover</span>
-                    </a>
-                </div>
-            </div>
-        {% endfor %}
+<main class="portfolio">
+  {% for item in site.data.portfolio %}
+    <div class="portfolio-item">
+      <a href="{{ item.link }}">
+        <img src="{{ item.images | first }}" alt="">
+      </a>
+      <div>
+        <h2 class="title">{{ item.name }}</h2>
+        <div class="year">{{ item.year }}</div>
+        <a class="button" href="{{ item.link }}">
+          <span>Discover</span>
+        </a>
+      </div>
     </div>
+  {% endfor %}
 </main>
