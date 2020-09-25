@@ -4,17 +4,17 @@ title: Home
 ---
 <main class="portfolio">
   {% for item in site.data.portfolio %}
-    <div class="portfolio-item">
-      <a href="{{ item.link }}">
-        <img src="{{ item.images | first }}" alt="">
+  <div class="portfolio-item">
+    <a href="{{ item.link }}">
+      <img src="{{ item.images[0].src | painting }}" alt="">
+    </a>
+    <div>
+      <h2 class="title">{{ item.name }}</h2>
+      <div class="year">{{ item.year }}</div>
+      <a class="button" href="{{ item.link }}">
+        <span>Discover</span>
       </a>
-      <div>
-        <h2 class="title">{{ item.name }}</h2>
-        <div class="year">{{ item.year }}</div>
-        <a class="button" href="{{ item.link }}">
-          <span>Discover</span>
-        </a>
-      </div>
     </div>
+  </div>
   {% endfor %}
 </main>

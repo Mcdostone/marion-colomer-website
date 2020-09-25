@@ -1,25 +1,28 @@
 ---
 layout: default
 ---
-
 {% if page.index %}
-  {% assign item = site.data.portfolio[page.index] %}
-  <main class="serie">
+{% assign item = site.data.portfolio[page.index] %}
+<main class="serie">
   <div class="paintings">
-      <img src="{{ item.images | first }}" alt="">
+    {% for image in item.images %}
+    {% assign src = image.src | painting %}
+    <img src="{{ src }}" width="{% imagesize src:width %}" height="{% imagesize src:height %}" alt="{{ image.alt }}" >
+    {% endfor %}
   </div>
   <article>
-      <h1 class="title">{{ item.name }}</h1>
-      <h2>—  {{ item.year }}  —</h1>
+    <h1 class="title">{{ item.name }}</h1>
+    <h2>—  {{ item.year }}  —</h1>
       {{ content }}
       {% if item.extra_links %}
-        <ul class="extra-links">
-          {% for extra in item.extra_links %}
-            <li><a href="{{ extra.link }}">{{ extra.name }}</a></li>  
-          {% endfor %}
-        </ul>
+      <ul class="extra-links">
+        {% for extra in item.extra_links %}
+        <li><a href="{{ extra.link }}">{{ extra.name }}</a></li>  
+        {% endfor %}
+      </ul>
       {% endif %}
-  </article>
-  {% include controls.html %}
+    </article>
+    {% include controls.html %}
 </main>
 {% endif %}
+  

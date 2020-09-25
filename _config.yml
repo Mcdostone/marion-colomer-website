@@ -28,7 +28,8 @@ defaultContentLanguage: "en"
 author: Marion Colomer
 
 # Build settings
-# plugins:
+plugins:
+  - jekyll-image-size
 # - jekyll-feed
 
 sass:

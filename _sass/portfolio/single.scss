@@ -1,32 +1,42 @@
 .serie {
   width: 100%;
-  max-width: calc(var(--container-width));
 }
 
 .paintings {
   display: flex;
   position: relative;
-
   height: 500px;
   max-height: 66vh;
-  margin: 2rem 0;
+  display: flex;
+  overflow-x: auto;
+  margin: 2em 0rem;
 }
 
 .paintings img {
-  margin: 0 auto;
   width: auto;
   height: 100%;
+  scroll-snap-align: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   object-fit: contain;
 }
 
+.paintings img + img {
+  margin-left: 2rem;
+}
+
 .serie article a,
 .serie article {
+  max-width: calc(var(--container-width));
   position: relative;
   font-size: 0.875rem;
   color: #454545;
   margin: auto;
+}
+
+.serie .controls {
+  margin: auto;
+  max-width: calc(var(--container-width));
 }
 
 .serie .extra-links {
@@ -37,7 +47,7 @@
 }
 
 .serie .title {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .serie article h2,

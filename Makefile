@@ -9,7 +9,7 @@ node_modules: package.json
 	npm install
 
 dev: vendor node_modules ## Runs the dev server
-	bundle exec jekyll serve
+	bundle exec jekyll serve --trace
 
 _site: build
 
