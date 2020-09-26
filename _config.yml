@@ -29,7 +29,6 @@ author: Marion Colomer
 
 # Build settings
 plugins:
-  - jekyll-image-size
   - jekyll-responsive-image
 # - jekyll-feed
 
@@ -76,3 +75,4 @@ responsive_image:
       quality: 75
   output_path_format: assets/images/resized/%{dirname}/%{basename}
   cache: false
+  save_to_source: false

@@ -13,7 +13,7 @@
       alt:
     - src: portraits-and-embroidery/6.jpg
       alt:
-  link: /portfolio/portraits-and-embroidery
+  link: /portfolio/portraits-and-embroidery.html
 - name: Kaleidoscope
   year: 2013
   images:
@@ -25,10 +25,10 @@
       alt: Kaleidoscope
     - src: kaleidoscope/4.jpg
       alt: Kaleidoscope
-  link: /portfolio/kaleidoscope
+  link: /portfolio/kaleidoscope.html
 - name: Melancholia
   year: 2016
-  link: /portfolio/melancholia
+  link: /portfolio/melancholia.html
   images:
     - src: melancholia/1.jpg
       alt:
@@ -64,5 +64,4 @@
       alt: birds
     - src: birds/8.jpg
       alt: birds
-
-  link: /portfolio/birds
+  link: /portfolio/birds.html
