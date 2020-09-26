@@ -11,8 +11,19 @@
             {% if next == size %}
                 {% assign next = 0 %}
             {% endif %}
-            <a href="{{ site.data.portfolio[previous].link }}" class="previous">{{ site.data.portfolio[previous].name }} / {{ site.data.portfolio[previous].year }}</a>
-            <a href="{{ site.data.portfolio[next].link }}" class="next">{{ site.data.portfolio[next].name }} / {{ site.data.portfolio[next].year }}</a>
+            <a href="{{ site.data.portfolio[previous].link }}" class="previous">
+            <svg>
+              <use xlink:href="/assets/images/icons.svg#arrow" />
+            </svg>
+            {{ site.data.portfolio[previous].name }} / {{ site.data.portfolio[previous].year }}
+            
+            </a>
+            <a href="{{ site.data.portfolio[next].link }}" class="next">
+            <svg>
+              <use xlink:href="/assets/images/icons.svg#arrow" />
+            </svg>
+            {{ site.data.portfolio[next].name }} / {{ site.data.portfolio[next].year }}
+            </a>
         {% endif %}
     {% endfor %}    
 </div>

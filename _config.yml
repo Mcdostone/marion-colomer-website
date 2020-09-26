@@ -30,6 +30,7 @@ author: Marion Colomer
 # Build settings
 plugins:
   - jekyll-image-size
+  - jekyll-responsive-image
 # - jekyll-feed
 
 sass:
@@ -54,6 +55,7 @@ exclude:
   - README.md
   - package-lock.json
   - .bundle
+  - assets/images/portfolio
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
@@ -64,3 +66,13 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+responsive_image:
+  template: _includes/image.html
+  strip: true
+  base_path: assets/images/portfolio
+  sizes:
+    - width: 800
+      quality: 75
+  output_path_format: assets/images/resized/%{dirname}/%{basename}
+  cache: false

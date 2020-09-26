@@ -8,8 +8,12 @@
 }
 
 .controls a {
+  --margin: 0.5rem;
   color: var(--gray);
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   text-decoration: none;
   position: relative;
   padding-top: 1.25rem;
@@ -21,31 +25,27 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-.controls a::before {
-  content: "";
-  position: absolute;
-  mask-image: url(/assets/images/arrow.svg);
+.controls a svg {
+  display: inline-block;
   height: 16px;
-  top: 0;
-  right: 0.5rem;
+  margin-right: var(--margin);
   width: 16px;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 16px;
-  background-color: black;
-  transition: 0.25s ease-in-out;
+  fill: black;
+  transition: margin 0.25s ease-in-out;
 }
 
-.controls a:hover::before {
-  right: 0;
-  transition: all 0.2s ease-out;
+.controls a:hover svg {
+  margin-right: 0;
+  transition: margin 0.2s ease-out;
 }
 
-.controls a.previous:hover::before {
-  left: 0;
+.controls a.previous:hover svg {
+  margin-left: 0;
 }
 
-.controls .previous::before {
+.controls .previous svg {
   transform: rotateZ(180deg);
-  left: 0.5rem;
+  margin: 0;
+  align-self: flex-start;
+  margin-left: var(--margin);
 }

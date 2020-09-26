@@ -6,8 +6,9 @@ layout: default
 <main class="serie">
   <div class="paintings">
     {% for image in item.images %}
-    {% assign src = image.src | painting %}
-    <img src="{{ src }}" width="{% imagesize src:width %}" height="{% imagesize src:height %}" alt="{{ image.alt }}" >
+      {% responsive_image_block %}
+        path: {{ 'assets/images/portfolio/' | append: image.src }}
+      {% endresponsive_image_block %}
     {% endfor %}
   </div>
   <article>

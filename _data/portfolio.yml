@@ -32,6 +32,14 @@
   images:
     - src: melancholia/1.jpg
       alt:
+    - src: melancholia/2.jpg
+      alt:
+    - src: melancholia/3.jpg
+      alt:
+    - src: melancholia/4.jpg
+      alt:
+    - src: melancholia/5.jpg
+      alt:
   extra_links:
     - name: Catalog
       link: /assets/uploads/melancholia-catalog.pdf

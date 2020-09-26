@@ -9,16 +9,21 @@
   max-height: 66vh;
   display: flex;
   overflow-x: auto;
-  margin: 2em 0rem;
+  padding-bottom: 1rem;
 }
 
 .paintings img {
   width: auto;
   height: 100%;
   scroll-snap-align: center;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /*box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);*/
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   object-fit: contain;
+}
+
+.serie article {
+  margin: 1rem auto auto auto;
 }
 
 .paintings img + img {
@@ -31,7 +36,6 @@
   position: relative;
   font-size: 0.875rem;
   color: #454545;
-  margin: auto;
 }
 
 .serie .controls {
@@ -63,7 +67,7 @@
 
 .serie article h2 {
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 1rem;
   font-weight: 100;
 }
@@ -79,7 +83,6 @@
 
 @media (max-width: 600px) {
   .paintings {
-    width: 100%;
-    height: auto;
+    height: 256px;
   }
 }

@@ -12,6 +12,7 @@ body {
     sans-serif;
   display: flex;
   min-height: 100vh;
+  height: 0px; // Thank you google chrome
   flex-direction: column;
 }
 
@@ -20,6 +21,6 @@ body {
 }
 
 main {
-  margin: auto auto;
+  margin: 1rem auto;
   flex: 1;
 }
