@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+class: portfolio
+activeURL: /portfolio
+---
+
+{% for item in portfolio %}
+  <div class="portfolio-item">
+    <a href="{{ item.link }}">
+      {% pictureAsset "/assets/images/portfolio/" + item.images[0].src %}
+    </a>
+    <div>
+      <h2 class="title"><a href="{{ item.link }}">{{ item.name }}</a></h2>
+      <div class="year">{{ item.year }}</div>
+    </div>
+  </div>
+{% endfor %}
+

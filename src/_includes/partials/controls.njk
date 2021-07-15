@@ -1,0 +1,29 @@
+<div class="controls">
+  {% set sorted = portfolio | sort(false, false, 'year') %}
+  {% for item in sorted %}
+    {% if page.url in item.link %}
+      {% set index = loop.index0 %}
+      {% set size = sorted | length %}
+      {% set previous = index - 1 %}
+      {% set next = index + 1 %}
+      {% if previous == -1 %}
+          {% set previous = size - 1 %}
+      {% endif %}
+      {% if next == size %}
+          {% set next = 0 %}
+      {% endif %}
+      <a href="{{ sorted[previous].link }}" class="previous">
+      <svg>
+        <use href="/assets/images/icons.svg#arrow" />
+      </svg>
+      {{ sorted[previous].name }} / {{ sorted[previous].year }}
+      </a>
+      <a href="{{ sorted[next].link }}" class="next">
+      <svg>
+        <use href="/assets/images/icons.svg#arrow" />
+      </svg>
+      {{ sorted[next].name }} / {{ sorted[next].year }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

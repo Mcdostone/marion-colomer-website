@@ -1,49 +1,58 @@
 {
-  "name": "marion-colomer-website",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "https://web.archive.org/web/20190129015755/http://marioncolomer.com/",
-  "main": "index.js",
+  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "eleventy --serve --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylelint": "stylelint --config package.json --fix pages/**/*.css",
+    "build": "eleventy build",
+    "prettier": "prettier --check .",
+    "lint": "npm-run-all --silent --continue-on-error stylelint prettier"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mcdostone/marion-colomer-website.git"
+    "url": "git+https://github.com/Mcdostone/blog.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mcdostone/marion-colomer-website/issues"
+    "url": "https://github.com/Mcdostone/blog/issues"
   },
-  "homepage": "https://github.com/Mcdostone/marion-colomer-website#readme",
+  "homepage": "https://github.com/Mcdostone/blog#readme",
   "devDependencies": {
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.0",
-    "prettier": "^2.1.2",
-    "stylelint": "^13.7.1",
-    "stylelint-config-standard": "^20.0.0"
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.5",
+    "image-size": "^1.0.0",
+    "jest": "^27.0.4",
+    "markdown-it": "^12.0.6",
+    "markdown-it-anchor": "^7.1.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0-beta.2",
+    "postcss-import-url": "^7.0.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-prettier": "^1.2.0",
+    "terser": "^5.6.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{scss}": [
-      "stylelint",
-      "git add"
-    ],
-    "*.{css,scss,yml,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
+  "peerDependencies": {
+    "postcss": "^8.2.10"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-prettier"
+    ],
     "rules": {
-      "no-descending-specificity": null,
+      "declaration-block-no-redundant-longhand-properties": true,
       "declaration-block-trailing-semicolon": "never",
-      "declaration-block-no-redundant-longhand-properties": true
+      "prettier/prettier": true
     }
+  },
+  "prettier": {
+    "printWidth": 160,
+    "semi": false,
+    "singleQuote": true
   }
 }

@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+class: serie
+---
+
+{% for item in portfolio %}
+  {% if page.url in item.link %}
+    <div class="paintings">
+      {% for image in item.images %}
+        {% pictureAsset "/assets/images/portfolio/" + image.src, {loading: "lazy", alt: image.alt}  %}
+      {% endfor %}
+    </div>
+    <article>
+      <h1 class="title">{{ item.name }}</h1>
+      <h2>—  {{ item.year }}  —</h1>
+        {{ content | safe }}
+        {% if item.extra_links %}
+        <ul class="extra-links">
+          {% for extra in item.extra_links %}
+          <li><a href="{{ extra.link }}">{{ extra.name }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      {% include "partials/controls.njk" %}
+  {% endif %}
+{% endfor %}

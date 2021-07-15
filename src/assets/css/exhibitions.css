@@ -1,0 +1,74 @@
+.exhibitions {
+  max-width: var(--container-width);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.exhibitions .title {
+  margin-bottom: 1rem;
+}
+
+.exhibitions #press {
+  margin-top: 3rem;
+}
+
+.per-year {
+  display: flex;
+}
+
+.per-year > div:first-child a {
+  display: block;
+  font-weight: 200;
+  width: 35px;
+  text-decoration: none;
+  color: inherit;
+  scroll-margin-top: 1rem;
+}
+
+.per-year + .per-year {
+  margin-top: 1rem;
+}
+
+.exhibitions ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.website:hover {
+  color: black;
+}
+
+.exhibitions li > * {
+  margin: 0;
+}
+
+.press,
+.exhibitions li > * + * {
+  margin-top: 0.25rem;
+}
+
+.description::first-letter {
+  text-transform: capitalize;
+}
+
+.description,
+.website,
+.location {
+  color: black;
+  font-size: 0.75rem;
+}
+
+.website,
+.location {
+  color: #a0a0a0;
+}
+
+.exhibitions li + li {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .exhibitions {
+    padding: 0;
+  }
+}

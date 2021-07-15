@@ -1,0 +1,22 @@
+{
+  "title": "",
+  "email": "",
+  "description": "Marion Colomer, painter artist based in Washington DC.",
+  "url": "https//marion-colomer.com",
+  "defaultContentLanguage": "en",
+  "author": "Marion Colomer",
+  "navigation": [
+    {
+       "name": "Portfolio",
+       "link": "/"
+    },
+    {
+       "name": "Exhibitions",
+       "link": "/exhibitions/"
+    },
+    {
+       "name": "Biography",
+       "link": "/biography/"
+    }
+ ]
+}
