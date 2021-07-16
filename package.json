@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "eleventy --serve --watch --host 0.0.0.0",
+    "dev": "eleventy --serve --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "stylelint": "stylelint --config package.json --fix pages/**/*.css",
     "build": "eleventy build",
@@ -61,6 +61,7 @@
     "singleQuote": true
   },
   "dependencies": {
+    "@hotwired/turbo": "^7.0.0-beta.8",
     "lightgallery": "^2.1.8"
   }
 }

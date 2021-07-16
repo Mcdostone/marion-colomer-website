@@ -21,6 +21,7 @@ export default defineConfig({
       ],
       input: {
         'assets/js/gallery': path.resolve('src/assets/js/gallery.js'),
+        'assets/js/turbo': path.resolve('src/assets/js/turbo.js'),
         'assets/css/style': path.resolve('src/assets/css/style.css'),
       },
       watch: {

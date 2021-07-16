@@ -24,7 +24,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter('dimensions', dimensions);
   eleventyConfig.setBrowserSyncConfig({
     https: true,
-    host: "0.0.0.0"
+    host: "0.0.0.0",
+    snippetOptions: {
+      rule: {
+        match: /<\/head>/i,
+        fn: function(snippet, match) {
+          return snippet + match;
+        }
+      }
+    }
   })
   //eleventyConfig.addWatchTarget('src/**/*.js')
   //eleventyConfig.addWatchTarget('module/*.js')
