@@ -1,18 +1,33 @@
 body {
-  --container-width: 960px;
-  --gray: #454545;
   --border-size: 2rem;
+  --container-width: calc(960px + var(--border-size) * 2);
+  --gray: #454545;
   --dark: #1a1a1a;
-
   margin: 0;
   padding: 0;
-  padding: var(--border-size);
-  // background: rgb(13, 13, 13);
   font-family: -apple-system, BlinkMacSystemFont, Avenir, Avenir Next, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   display: flex;
   flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr min(var(--container-width), 100%) 1fr;
+}
+
+.full-bleed {
+  width: 100%;
+  padding: 0;
+  grid-column: 1 / 4;
+}
+
+body > header {
+  padding: var(--border-size);
+}
+
+body > * {
+  padding-left: var(--border-size);
+  padding-right: var(--border-size);
+  grid-column: 2;
 }
 
 * {
@@ -22,6 +37,7 @@ body {
 main {
   margin: auto;
   margin-top: 1rem;
+  margin-bottom: var(--border-size);
   flex: 1;
 }
 

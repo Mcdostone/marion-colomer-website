@@ -38,9 +38,7 @@ class: exhibitions
       <p class="location">{{ item.location }}</p>
       <a class="website" rel="noopener" target="_blank" href="{{ item.link  }}">
         {% if isHttp.test(item.link) %}
-        {{ item.link }}
         {% else %}
-        {{ item.link | replace("/assets/uploads/", "") }}
         {% endif %}
       </a
     </a>

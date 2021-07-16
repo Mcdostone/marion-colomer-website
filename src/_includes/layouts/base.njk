@@ -14,6 +14,8 @@
     <meta property="og:description" content="{{ site.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0">
     <title>{{ title }} - {{ site.author }}</title>
+    {% for link in js %}<script type="module" src="{{link}}"></script>{% endfor %}
+    {% for link in css %}<link rel="stylesheet" href="{{link}}">{% endfor %}
   </head>
 
   </head>

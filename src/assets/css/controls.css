@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   transition: color 0.25s ease-in-out;
+  padding: 0 var(--border-size);
 }
 
 .controls a {

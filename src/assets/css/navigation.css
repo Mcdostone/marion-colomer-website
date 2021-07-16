@@ -4,7 +4,7 @@ header {
   align-items: flex-start;
   max-width: var(--container-width);
   margin: 0 auto;
-  margin-bottom: var(--border-size);
+  padding: var(--border-size) 0;
   width: 100%;
 }
 

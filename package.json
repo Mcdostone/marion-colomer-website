@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "eleventy --serve --watch",
+    "dev": "eleventy --serve --watch --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "stylelint": "stylelint --config package.json --fix pages/**/*.css",
     "build": "eleventy build",
     "prettier": "prettier --check .",
-    "lint": "npm-run-all --silent --continue-on-error stylelint prettier"
+    "lint": "npm-run-all --silent --continue-on-error stylelint prettier",
+    "vite:dev": "vite build --watch",
+    "vite:serve": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -31,13 +33,16 @@
     "parcel": "^2.0.0-beta.2",
     "postcss-import-url": "^7.0.0",
     "prettier": "^2.2.1",
+    "rollup-plugin-terser": "^7.0.2",
     "stylelint": "^13.12.0",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-prettier": "^1.2.0",
-    "terser": "^5.6.1"
+    "terser": "^5.6.1",
+    "vite": "^2.4.2"
   },
   "peerDependencies": {
-    "postcss": "^8.2.10"
+    "postcss": "^8.2.10",
+    "vite": "^2.4.2"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
@@ -54,5 +59,8 @@
     "printWidth": 160,
     "semi": false,
     "singleQuote": true
+  },
+  "dependencies": {
+    "lightgallery": "^2.1.8"
   }
 }
