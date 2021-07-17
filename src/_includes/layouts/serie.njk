@@ -11,7 +11,7 @@ css: ['/assets/js/gallery.css']
       {% for image in item.images %}
         {% set url = "/assets/images/portfolio/" + image.src %}
         <a href="{{url}}" data-lg-size="{{ url | dimensions | join("-") }}">
-        {% pictureAsset url, {loading: "lazy", alt: image.alt}  %}
+        {% pictureAsset url, {alt: image.alt}  %}
         </a>
       {% endfor %}
     </div>

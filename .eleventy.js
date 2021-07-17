@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
     permalink: true,
   })
   eleventyConfig.setLibrary('md', engine)
-  eleventyConfig.addShortcode('pictureAsset', pictureAsset)
+  eleventyConfig.addNunjucksAsyncShortcode('pictureAsset', pictureAsset)
   eleventyConfig.addNunjucksFilter('groupByYear', groupByYear);
   eleventyConfig.addNunjucksFilter('dimensions', dimensions);
   eleventyConfig.setBrowserSyncConfig({
