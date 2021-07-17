@@ -1,132 +1,132 @@
 [
   {
-     "name": "Portraits And Embroidery",
-     "year": 2010,
-     "images": [
-        {
-           "src": "portraits-and-embroidery/1.jpg",
-           "alt": ""
-        },
-        {
-           "src": "portraits-and-embroidery/2.jpg",
-           "alt": ""
-        },
-        {
-           "src": "portraits-and-embroidery/3.jpg",
-           "alt": ""
-        },
-        {
-           "src": "portraits-and-embroidery/4.jpg",
-           "alt": ""
-        },
-        {
-           "src": "portraits-and-embroidery/5.jpg",
-           "alt": ""
-        },
-        {
-           "src": "portraits-and-embroidery/6.jpg",
-           "alt": ""
-        }
-     ],
-     "link": "/portfolio/portraits-and-embroidery/"
+    "name": "Portraits And Embroidery",
+    "year": 2010,
+    "images": [
+      {
+        "src": "portraits-and-embroidery/1.jpg",
+        "alt": ""
+      },
+      {
+        "src": "portraits-and-embroidery/2.jpg",
+        "alt": ""
+      },
+      {
+        "src": "portraits-and-embroidery/3.jpg",
+        "alt": ""
+      },
+      {
+        "src": "portraits-and-embroidery/4.jpg",
+        "alt": ""
+      },
+      {
+        "src": "portraits-and-embroidery/5.jpg",
+        "alt": ""
+      },
+      {
+        "src": "portraits-and-embroidery/6.jpg",
+        "alt": ""
+      }
+    ],
+    "link": "/portfolio/portraits-and-embroidery/"
   },
   {
-     "name": "Kaleidoscope",
-     "year": 2013,
-     "images": [
-        {
-           "src": "kaleidoscope/1.jpg",
-           "alt": "Kaleidoscope"
-        },
-        {
-           "src": "kaleidoscope/2.jpg",
-           "alt": "Kaleidoscope"
-        },
-        {
-           "src": "kaleidoscope/3.jpg",
-           "alt": "Kaleidoscope"
-        },
-        {
-           "src": "kaleidoscope/4.jpg",
-           "alt": "Kaleidoscope"
-        }
-     ],
-     "link": "/portfolio/kaleidoscope/"
+    "name": "Kaleidoscope",
+    "year": 2013,
+    "images": [
+      {
+        "src": "kaleidoscope/1.jpg",
+        "alt": "Kaleidoscope"
+      },
+      {
+        "src": "kaleidoscope/2.jpg",
+        "alt": "Kaleidoscope"
+      },
+      {
+        "src": "kaleidoscope/3.jpg",
+        "alt": "Kaleidoscope"
+      },
+      {
+        "src": "kaleidoscope/4.jpg",
+        "alt": "Kaleidoscope"
+      }
+    ],
+    "link": "/portfolio/kaleidoscope/"
   },
   {
-     "name": "Melancholia",
-     "year": 2016,
-     "link": "/portfolio/melancholia/",
-     "images": [
-        {
-           "src": "melancholia/1.jpg",
-           "alt": ""
-        },
-        {
-           "src": "melancholia/2.jpg",
-           "alt": ""
-        },
-        {
-           "src": "melancholia/3.jpg",
-           "alt": ""
-        },
-        {
-           "src": "melancholia/4.jpg",
-           "alt": ""
-        },
-        {
-           "src": "melancholia/5.jpg",
-           "alt": ""
-        }
-     ],
-     "extra_links": [
-        {
-           "name": "Catalog",
-           "link": "/assets/uploads/melancholia-catalog.pdf"
-        },
-        {
-           "name": "Press Release",
-           "link": "/assets/uploads/melancholia-press-release.pdf"
-        }
-     ]
+    "name": "Melancholia",
+    "year": 2016,
+    "link": "/portfolio/melancholia/",
+    "images": [
+      {
+        "src": "melancholia/1.jpg",
+        "alt": ""
+      },
+      {
+        "src": "melancholia/2.jpg",
+        "alt": ""
+      },
+      {
+        "src": "melancholia/3.jpg",
+        "alt": ""
+      },
+      {
+        "src": "melancholia/4.jpg",
+        "alt": ""
+      },
+      {
+        "src": "melancholia/5.jpg",
+        "alt": ""
+      }
+    ],
+    "extra_links": [
+      {
+        "name": "Catalog",
+        "link": "/assets/uploads/melancholia-catalog.pdf"
+      },
+      {
+        "name": "Press Release",
+        "link": "/assets/uploads/melancholia-press-release.pdf"
+      }
+    ]
   },
   {
-     "name": "Birds",
-     "year": 2016,
-     "images": [
-        {
-           "src": "birds/1.jpg",
-           "alt": "birds"
-        },
-        {
-           "src": "birds/2.jpg",
-           "alt": "birds"
-        },
-        {
-           "src": "birds/3.jpg",
-           "alt": "birds"
-        },
-        {
-           "src": "birds/4.jpg",
-           "alt": "birds"
-        },
-        {
-           "src": "birds/5.jpg",
-           "alt": "birds"
-        },
-        {
-           "src": "birds/6.jpg",
-           "alt": "birds"
-        },
-        {
-           "src": "birds/7.jpg",
-           "alt": "birds"
-        },
-        {
-           "src": "birds/8.jpg",
-           "alt": "birds"
-        }
-     ],
-     "link": "/portfolio/birds/"
+    "name": "Birds",
+    "year": 2016,
+    "images": [
+      {
+        "src": "birds/1.jpg",
+        "alt": "birds"
+      },
+      {
+        "src": "birds/2.jpg",
+        "alt": "birds"
+      },
+      {
+        "src": "birds/3.jpg",
+        "alt": "birds"
+      },
+      {
+        "src": "birds/4.jpg",
+        "alt": "birds"
+      },
+      {
+        "src": "birds/5.jpg",
+        "alt": "birds"
+      },
+      {
+        "src": "birds/6.jpg",
+        "alt": "birds"
+      },
+      {
+        "src": "birds/7.jpg",
+        "alt": "birds"
+      },
+      {
+        "src": "birds/8.jpg",
+        "alt": "birds"
+      }
+    ],
+    "link": "/portfolio/birds/"
   }
 ]

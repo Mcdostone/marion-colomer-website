@@ -4,59 +4,59 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .portfolio-item {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
 }
 
 .portfolio-item + .portfolio-item {
-  margin-top: 3rem
+  margin-top: 3rem;
 }
 
 .portfolio-item > a {
-  width: 50%
+  width: 50%;
 }
 
 .portfolio-item .title {
-  text-align: right
+  text-align: right;
 }
 
 .portfolio-item > div {
   padding-left: 2rem;
   width: 100%;
-  flex: 1
+  flex: 1;
 }
 
 .portfolio-item .year {
   font-size: 1rem;
   font-weight: 100;
   text-align: right;
-  margin: 1rem 0 1.5rem 0
+  margin: 1rem 0 1.5rem 0;
 }
 
 .portfolio-item img {
   width: 100%;
   height: auto;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .portfolio-item .button {
-  margin-left: auto
+  margin-left: auto;
 }
 
 .serie {
   width: 100%;
-  padding: 0
+  padding: 0;
 }
 
 .serie article {
   padding: 0 var(--border-size);
-  margin: 1rem auto auto auto
+  margin: 1rem auto auto auto;
 }
 
 .paintings {
@@ -64,7 +64,7 @@
   display: flex;
   overflow-x: auto;
   padding-bottom: 1rem;
-  align-self: center
+  align-self: center;
 }
 
 .paintings a {
@@ -72,7 +72,7 @@
   width: fit-content;
   height: fit-content;
   margin-left: 2rem;
-  scroll-snap-align: center
+  scroll-snap-align: center;
 }
 
 .paintings img {
@@ -81,7 +81,7 @@
   width: auto;
   max-height: 66vh;
   height: 500px;
-  float: left
+  float: left;
 }
 
 .serie article a,
@@ -89,108 +89,108 @@
   max-width: calc(var(--container-width));
   position: relative;
   font-size: 0.875rem;
-  color: #454545
+  color: #454545;
 }
 
 .serie .controls {
   margin: auto;
-  max-width: calc(var(--container-width))
+  max-width: calc(var(--container-width));
 }
 
 .serie .extra-links {
   margin: 0;
   padding: 0;
   list-style-position: inside;
-  list-style-type: square
+  list-style-type: square;
 }
 
 .serie .title {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .serie article h2,
 .serie article h1 {
-  text-align: center
+  text-align: center;
 }
 
 .serie article h2 {
   margin: 0;
   margin-bottom: 1.5rem;
   font-size: 1rem;
-  font-weight: 100
+  font-weight: 100;
 }
 
 .serie .extra-links,
 .serie article p {
-  line-height: 2
+  line-height: 2;
 }
 
 .serie article p + p {
-  margin-top: 1.75rem
+  margin-top: 1.75rem;
 }
 
 .portfolio-item .title a {
   color: var(--dark);
-  text-decoration: none
+  text-decoration: none;
 }
 
 .paintings a:last-child {
-  margin-right: 2rem
+  margin-right: 2rem;
 }
 
 .portfolio-item .title a:hover,
 .portfolio-item > a:hover + div .title a {
-  border-bottom: 2px solid var(--dark)
+  border-bottom: 2px solid var(--dark);
 }
 
 @media (max-width: 600px) {
   .paintings {
     display: flex;
-    align-items: flex-end
+    align-items: flex-end;
   }
 
   .paintings img {
     width: 66vw;
     height: auto;
-    max-height: 66vh
+    max-height: 66vh;
   }
 
   .portfolio-item > a {
-    width: 100%
+    width: 100%;
   }
 
   .portfolio-item .button {
-    width: 100%
+    width: 100%;
   }
 
   .exhibitions ul {
-    padding-left: 1rem
+    padding-left: 1rem;
   }
 
   .portfolio-item img {
-    width: 100%
+    width: 100%;
   }
 }
 
 @media (max-width: 800px) {
   .portfolio-item {
-    flex-direction: column
+    flex-direction: column;
   }
 
   .portfolio-item .title {
-    font-size: 10vmin
+    font-size: 10vmin;
   }
 
   .portfolio-item .year,
   .portfolio-item .title {
-    text-align: center
+    text-align: center;
   }
 
   .portfolio-item > div {
-    padding: 0
+    padding: 0;
   }
 
   .portfolio-item .button {
-    margin: 0 auto
+    margin: 0 auto;
   }
 }

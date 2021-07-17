@@ -7,16 +7,16 @@
   "author": "Marion Colomer",
   "navigation": [
     {
-       "name": "Portfolio",
-       "link": "/"
+      "name": "Portfolio",
+      "link": "/"
     },
     {
-       "name": "Exhibitions",
-       "link": "/exhibitions/"
+      "name": "Exhibitions",
+      "link": "/exhibitions/"
     },
     {
-       "name": "Biography",
-       "link": "/biography/"
+      "name": "Biography",
+      "link": "/biography/"
     }
- ]
+  ]
 }

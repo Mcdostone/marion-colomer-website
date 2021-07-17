@@ -1,10 +1,9 @@
-import lightGallery from 'lightgallery';
-import "lightgallery/css/lightgallery.css"
+import lightGallery from 'lightgallery'
+import 'lightgallery/css/lightgallery.css'
 
-
-document.addEventListener("turbo:load", function() {
+document.addEventListener('turbo:load', function () {
   const element = document.getElementById('gallery')
-  if(!element) {
+  if (!element) {
     return
   }
   lightGallery(element, {
@@ -15,7 +14,7 @@ document.addEventListener("turbo:load", function() {
     closable: true,
     mobileSettings: {
       showCloseIcon: true,
-      closeOnTap: true
+      closeOnTap: true,
     },
   })
 })

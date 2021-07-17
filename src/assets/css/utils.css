@@ -2,7 +2,7 @@
   margin: 0;
   font-size: 3.5rem;
   font-weight: 100;
-  color: var(--dark)
+  color: var(--dark);
 }
 
 .button {
@@ -10,7 +10,7 @@
   width: min-content;
   text-decoration: none;
   position: relative;
-  margin: 0
+  margin: 0;
 }
 
 .button::before {
@@ -23,7 +23,7 @@
   bottom: 0;
   background: #fff;
   border: 1.5px solid black;
-  transition: transform 0.3s ease
+  transition: transform 0.3s ease;
 }
 
 .button > span {
@@ -41,15 +41,15 @@
   text-align: center;
   transition: transform 0.3s ease;
   transform: translate(-4px, -4px);
-  width: 100%
+  width: 100%;
 }
 
 .button:hover > span {
-  transform: translate(0)
+  transform: translate(0);
 }
 
 @media (max-width: 800px) {
   .title {
-    font-size: 10vmin
+    font-size: 10vmin;
   }
 }

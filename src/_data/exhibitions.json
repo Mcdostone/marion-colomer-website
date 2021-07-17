@@ -1,174 +1,174 @@
 [
-   {
-      "description": "Marion Colomer solo «Melancholia»",
-      "date": {
-         "from": "2018-02-09",
-         "to": "2018-02-23"
-      },
-      "location": "Gallery O on H // 1354 H Street NE, Washington DC, United States",
-      "link": "https://www.galleryoonh.com/"
-   },
-   {
-      "description": "Emulsion, part of East City Art, Annual regional juried show show",
-      "date": {
-         "from": "2017-03-03",
-         "to": "2017-03-16"
-      },
-      "location": "Pepco Edison Art Gallery, Washington DC, United States",
-      "link": "http://www.eastcityart.com/emulsion/"
-   },
-   {
-      "description": "Melancholia, part of group show, Fall Solos 2016",
-      "date": {
-         "from": "2016-10-15",
-         "to": "2016-12-18"
-      },
-      "location": "Arlington Art Center, Washington DC area, United States",
-      "link": "https://arlingtonartscenter.org/fallsolos2016"
-   },
-   {
-      "description": "Birds, part of Ward 12, group show",
-      "date": {
-         "from": "2016-12-07",
-         "to": "2016-12-21"
-      },
-      "location": "Halcyon House, Georgetown, Washington DC, United States",
-      "link": "http://fillmorearts.org/studios-program-exhibition-ward-12"
-   },
-   {
-      "date": {
-         "from": "2012-09-01",
-         "to": ""
-      },
-      "description": "Solo show «Mysterious India»",
-      "location": "Wide Painting Gallery, Paris 5eme, France"
-   },
-   {
-      "date": {
-         "from": "2011-05-01",
-         "to": ""
-      },
-      "description": "group show «Tiger!Tiger»",
-      "location": "Aman Hotel Delhi and Polka Art Galley Delhi, India"
-   },
-   {
-      "date": {
-         "from": "2010-09-01",
-         "to": ""
-      },
-      "description": "Solo show",
-      "location": "Wide painting gallery, Paris 5eme, France",
-      "link": "http://www.dailymotion.com/video/xl13gh_marion-colomer-s-expose-a-la-wide-painting-gallery_creation"
-   },
-   {
-      "date": {
-         "from": "2010-06-01",
-         "to": ""
-      },
-      "description": "Solo show",
-      "location": "Magalie Gillet art gallery, Paris 6eme, France"
-   },
-   {
-      "date": {
-         "from": "2009-12-01",
-         "to": ""
-      },
-      "description": "The heart of healing », exhibition for the AIDS day. Exhibition benefits for the Naz Foundation",
-      "location": "New Delhi, India"
-   },
-   {
-      "date": {
-         "from": "2009-04-01",
-         "to": ""
-      },
-      "description": "« It’s a Wonderful World », Stainless Gallery and in association with Nitanjeli Art Gallery. Exhibition benefits to the NGO Four Steps.",
-      "location": "New Delhi, India"
-   },
-   {
-      "date": {
-         "from": "2008-12-01",
-         "to": ""
-      },
-      "description": "« Jewels of the Princes and Portraits by Marion Colomer » Red Earth gallery Baroda. Sponsors by the Alliance Francaise of Ahmenabad, India and Karan Grover"
-   },
-   {
-      "date": {
-         "from": "2008-10-01",
-         "to": ""
-      },
-      "description": "Indian portraits",
-      "location": "Alliance Francaise of Pondicherry, India"
-   },
-   {
-      "date": {
-         "from": "2008-09-01",
-         "to": ""
-      },
-      "description": "« Indian portraits »",
-      "location": "Alliance Francaise of Chandigarh, India"
-   },
-   {
-      "date": {
-         "from": "2008-06-01",
-         "to": ""
-      },
-      "description": "« Indian portraits » galerie l’atelier de Marianne",
-      "location": "Paris 6eme, France"
-   },
-   {
-      "date": {
-         "from": "2008-06-01",
-         "to": ""
-      },
-      "description": "« Indian portraits »",
-      "location": "City hall of Paris, France."
-   },
-   {
-      "date": {
-         "from": "2008-05-01",
-         "to": ""
-      },
-      "description": "« Indian portraits »",
-      "location": "Gallery Gauche of Beaux Art School, Paris, France"
-   },
-   {
-      "date": {
-         "from": "2008-03-01",
-         "to": ""
-      },
-      "description": "Maharajas to Glitterati",
-      "location": "alliance francaise of New Delhi, India"
-   },
-   {
-      "date": {
-         "from": "2008-02-01",
-         "to": ""
-      },
-      "description": "« Maharajas to Glitterati »",
-      "location": "Salarjung, Hyderabad, India"
-   },
-   {
-      "date": {
-         "from": "2004-01-01",
-         "to": ""
-      },
-      "description": "« Bazaar » Sponsored by the French Embassy, India.",
-      "location": "Habitat Center in New Delhi, India"
-   },
-   {
-      "date": {
-         "from": "2004-01-01",
-         "to": ""
-      },
-      "description": "“ENSBA n’est ce pas?”. Exposed four pieces of originals lithography",
-      "location": "Bagnoles de l’Orne, France"
-   },
-   {
-      "date": {
-         "from": "2003-01-01",
-         "to": ""
-      },
-      "description": "“I Love India”",
-      "location": "Gallery Gauche of Beaux Art School, Paris, France"
-   }
+  {
+    "description": "Marion Colomer solo «Melancholia»",
+    "date": {
+      "from": "2018-02-09",
+      "to": "2018-02-23"
+    },
+    "location": "Gallery O on H // 1354 H Street NE, Washington DC, United States",
+    "link": "https://www.galleryoonh.com/"
+  },
+  {
+    "description": "Emulsion, part of East City Art, Annual regional juried show show",
+    "date": {
+      "from": "2017-03-03",
+      "to": "2017-03-16"
+    },
+    "location": "Pepco Edison Art Gallery, Washington DC, United States",
+    "link": "http://www.eastcityart.com/emulsion/"
+  },
+  {
+    "description": "Melancholia, part of group show, Fall Solos 2016",
+    "date": {
+      "from": "2016-10-15",
+      "to": "2016-12-18"
+    },
+    "location": "Arlington Art Center, Washington DC area, United States",
+    "link": "https://arlingtonartscenter.org/fallsolos2016"
+  },
+  {
+    "description": "Birds, part of Ward 12, group show",
+    "date": {
+      "from": "2016-12-07",
+      "to": "2016-12-21"
+    },
+    "location": "Halcyon House, Georgetown, Washington DC, United States",
+    "link": "http://fillmorearts.org/studios-program-exhibition-ward-12"
+  },
+  {
+    "date": {
+      "from": "2012-09-01",
+      "to": ""
+    },
+    "description": "Solo show «Mysterious India»",
+    "location": "Wide Painting Gallery, Paris 5eme, France"
+  },
+  {
+    "date": {
+      "from": "2011-05-01",
+      "to": ""
+    },
+    "description": "group show «Tiger!Tiger»",
+    "location": "Aman Hotel Delhi and Polka Art Galley Delhi, India"
+  },
+  {
+    "date": {
+      "from": "2010-09-01",
+      "to": ""
+    },
+    "description": "Solo show",
+    "location": "Wide painting gallery, Paris 5eme, France",
+    "link": "http://www.dailymotion.com/video/xl13gh_marion-colomer-s-expose-a-la-wide-painting-gallery_creation"
+  },
+  {
+    "date": {
+      "from": "2010-06-01",
+      "to": ""
+    },
+    "description": "Solo show",
+    "location": "Magalie Gillet art gallery, Paris 6eme, France"
+  },
+  {
+    "date": {
+      "from": "2009-12-01",
+      "to": ""
+    },
+    "description": "The heart of healing », exhibition for the AIDS day. Exhibition benefits for the Naz Foundation",
+    "location": "New Delhi, India"
+  },
+  {
+    "date": {
+      "from": "2009-04-01",
+      "to": ""
+    },
+    "description": "« It’s a Wonderful World », Stainless Gallery and in association with Nitanjeli Art Gallery. Exhibition benefits to the NGO Four Steps.",
+    "location": "New Delhi, India"
+  },
+  {
+    "date": {
+      "from": "2008-12-01",
+      "to": ""
+    },
+    "description": "« Jewels of the Princes and Portraits by Marion Colomer » Red Earth gallery Baroda. Sponsors by the Alliance Francaise of Ahmenabad, India and Karan Grover"
+  },
+  {
+    "date": {
+      "from": "2008-10-01",
+      "to": ""
+    },
+    "description": "Indian portraits",
+    "location": "Alliance Francaise of Pondicherry, India"
+  },
+  {
+    "date": {
+      "from": "2008-09-01",
+      "to": ""
+    },
+    "description": "« Indian portraits »",
+    "location": "Alliance Francaise of Chandigarh, India"
+  },
+  {
+    "date": {
+      "from": "2008-06-01",
+      "to": ""
+    },
+    "description": "« Indian portraits » galerie l’atelier de Marianne",
+    "location": "Paris 6eme, France"
+  },
+  {
+    "date": {
+      "from": "2008-06-01",
+      "to": ""
+    },
+    "description": "« Indian portraits »",
+    "location": "City hall of Paris, France."
+  },
+  {
+    "date": {
+      "from": "2008-05-01",
+      "to": ""
+    },
+    "description": "« Indian portraits »",
+    "location": "Gallery Gauche of Beaux Art School, Paris, France"
+  },
+  {
+    "date": {
+      "from": "2008-03-01",
+      "to": ""
+    },
+    "description": "Maharajas to Glitterati",
+    "location": "alliance francaise of New Delhi, India"
+  },
+  {
+    "date": {
+      "from": "2008-02-01",
+      "to": ""
+    },
+    "description": "« Maharajas to Glitterati »",
+    "location": "Salarjung, Hyderabad, India"
+  },
+  {
+    "date": {
+      "from": "2004-01-01",
+      "to": ""
+    },
+    "description": "« Bazaar » Sponsored by the French Embassy, India.",
+    "location": "Habitat Center in New Delhi, India"
+  },
+  {
+    "date": {
+      "from": "2004-01-01",
+      "to": ""
+    },
+    "description": "“ENSBA n’est ce pas?”. Exposed four pieces of originals lithography",
+    "location": "Bagnoles de l’Orne, France"
+  },
+  {
+    "date": {
+      "from": "2003-01-01",
+      "to": ""
+    },
+    "description": "“I Love India”",
+    "location": "Gallery Gauche of Beaux Art School, Paris, France"
+  }
 ]

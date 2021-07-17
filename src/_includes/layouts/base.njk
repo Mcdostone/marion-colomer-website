@@ -14,6 +14,7 @@
     <meta property="og:description" content="{{ site.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0">
     <title>{{ title }} - {{ site.author }}</title>
+    {% if reload %}<meta name="turbo-visit-control" content="reload">{% endif %}
     <script type="module" src="/assets/js/turbo.js"></script>
     {% for link in js %}<script type="module" data-turbo-track="reload" src="{{link}}"></script>{% endfor %}
     {% for link in css %}<link rel="stylesheet" href="{{link}}">{% endfor %}

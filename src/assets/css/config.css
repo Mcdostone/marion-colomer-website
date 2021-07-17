@@ -1,6 +1,6 @@
 html {
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 body {
@@ -13,60 +13,47 @@ body {
 
   margin: 0;
   padding: 0;
-  font-family:
-    Helvetica,
-    -apple-system,
-    BlinkMacSystemFont,
-    Avenir,
-    Avenir Next,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
+  font-family: Helvetica, -apple-system, BlinkMacSystemFont, Avenir, Avenir Next, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   display: grid;
   grid-template-columns: 1fr min(var(--container-width), 100%) 1fr;
-  grid-template-rows: auto
+  grid-template-rows: auto;
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .full-bleed {
   width: 100%;
   padding: 0;
-  grid-column: 1 / 4
+  grid-column: 1 / 4;
 }
 
 body > header {
-  padding: var(--border-size)
+  padding: var(--border-size);
 }
 
 body > * {
   padding-left: var(--border-size);
   padding-right: var(--border-size);
-  grid-column: 2
+  grid-column: 2;
 }
 
 main {
   margin: auto;
   margin-top: 1rem;
   margin-bottom: var(--border-size);
-  flex: 1
+  flex: 1;
 }
 
 .page-404 * {
-  text-align: center
+  text-align: center;
 }
 
 .page-404 h1 {
   margin: 30px 0;
   font-size: 4em;
   line-height: 1;
-  letter-spacing: -1px
+  letter-spacing: -1px;
 }

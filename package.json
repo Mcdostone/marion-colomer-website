@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "eleventy --serve --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "stylelint": "stylelint --config package.json --fix src/assets/css/*.css",
-    "build": "eleventy build",
-    "prettier": "prettier --check .",
-    "lint": "npm-run-all --silent --continue-on-error stylelint prettier",
+    "eleventy:dev": "eleventy --serve --watch",
     "vite:dev": "vite build --watch",
+    "dev": "npm-run-all --silent --continue-on-error eleventy:dev vite:dev",
+    "eleventy:build": "eleventy build",
     "vite:build": "vite build",
-    "vite:serve": "vite preview"
+    "build": "npm-run-all --continue-on-error eleventy:build vite:build",
+    "stylelint": "stylelint --config package.json --fix src/assets/css/*.css",
+    "prettier": "prettier --check .",
+    "lint": "npm-run-all --silent --continue-on-error stylelint prettier"
   },
   "repository": {
     "type": "git",

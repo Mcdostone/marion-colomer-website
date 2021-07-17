@@ -9,30 +9,30 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/favicon.svg')
   eleventyConfig.addPassthroughCopy('./src/assets/images')
   eleventyConfig.addPassthroughCopy('./src/assets/uploads')
-  eleventyConfig.addPassthroughCopy({'./src/assets/css': false})
+  eleventyConfig.addPassthroughCopy({ './src/assets/css': false })
   const engine = markdownIt({
     html: true,
   }).use(markdownItAnchor, {
     level: [1, 2, 3],
-    permalinkAttrs: _ => ({ 'aria-label': 'permalink'}),
+    permalinkAttrs: (_) => ({ 'aria-label': 'permalink' }),
     permalinkSymbol: '',
     permalink: true,
   })
   eleventyConfig.setLibrary('md', engine)
   eleventyConfig.addNunjucksAsyncShortcode('pictureAsset', pictureAsset)
-  eleventyConfig.addNunjucksFilter('groupByYear', groupByYear);
-  eleventyConfig.addNunjucksFilter('dimensions', dimensions);
+  eleventyConfig.addNunjucksFilter('groupByYear', groupByYear)
+  eleventyConfig.addNunjucksFilter('dimensions', dimensions)
   eleventyConfig.setBrowserSyncConfig({
     https: true,
-    host: "0.0.0.0",
+    host: '0.0.0.0',
     snippetOptions: {
       rule: {
         match: /<\/head>/i,
-        fn: function(snippet, match) {
-          return snippet + match;
-        }
-      }
-    }
+        fn: function (snippet, match) {
+          return snippet + match
+        },
+      },
+    },
   })
   //eleventyConfig.addWatchTarget('src/**/*.js')
   //eleventyConfig.addWatchTarget('module/*.js')
