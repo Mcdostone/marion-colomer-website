@@ -5,7 +5,7 @@ header {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: var(--border-size) 0;
-  width: 100%;
+  width: 100%
 }
 
 header nav a {
@@ -15,17 +15,17 @@ header nav a {
   border-bottom: 1px solid transparent;
   padding-bottom: 0.25rem;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 400
 }
 
 header nav {
   width: 100%;
-  text-align: right;
+  text-align: right
 }
 
 header nav a.current,
 header nav a:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black
 }
 
 .logo {
@@ -33,44 +33,45 @@ header nav a:hover {
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
-  color: black;
+  color: black
 }
 
 header nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0
 }
 
 header nav ul li {
   display: inline-block;
-  margin-right: 2.5rem;
+  margin-right: 2.5rem
 }
 
 header nav ul li:last-child {
-  margin-right: 0;
+  margin-right: 0
 }
 
 @media (max-width: 600px) {
   header {
     flex-direction: column;
-    align-items: center;
+    align-items: center
   }
+
   .logo {
-    text-align: center;
+    text-align: center
   }
 
   header nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly
   }
 
   header nav ul li {
-    margin-right: 0;
+    margin-right: 0
   }
 
   header nav {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1rem
   }
 }

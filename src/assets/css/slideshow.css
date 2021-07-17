@@ -2,28 +2,28 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center
 }
 
 #slideshow {
   overflow: hidden;
   height: 510px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 .slide-wrapper {
   overflow: hidden;
-  width: 100%;
+  width: 100%
 }
 
 .slide {
-  float: left;
+  float: left
 }
 
 #splashscreen .slide .button {
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 2rem
 }
 
 /*

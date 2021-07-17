@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "eleventy --serve --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stylelint": "stylelint --config package.json --fix pages/**/*.css",
+    "stylelint": "stylelint --config package.json --fix src/assets/css/*.css",
     "build": "eleventy build",
     "prettier": "prettier --check .",
     "lint": "npm-run-all --silent --continue-on-error stylelint prettier",
