@@ -3,6 +3,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 const pictureAsset = require('./src/modules/pictureAsset')
 const groupByYear = require('./src/modules/groupByYear')
 const dimensions = require('./src/modules/dimensions')
+const url = require('./src/modules/url')
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(['md', 'html', 'njk', 'css'])
@@ -21,6 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', engine)
   eleventyConfig.addNunjucksAsyncShortcode('pictureAsset', pictureAsset)
   eleventyConfig.addNunjucksFilter('groupByYear', groupByYear)
+  eleventyConfig.addNunjucksFilter('url', url)
   eleventyConfig.addNunjucksFilter('dimensions', dimensions)
   eleventyConfig.setBrowserSyncConfig({
     https: true,

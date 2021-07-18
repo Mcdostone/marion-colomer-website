@@ -4,8 +4,6 @@ title: Exhibitions
 class: exhibitions
 ---
 
-{% set isHttp = r/^https?.*/g %}
-
 <h2 class="title" id="exhibitions">Exhibitions</h2>
 {% for perYear in exhibitions | groupByYear("date.from") %}
 <div class="per-year">
@@ -17,7 +15,9 @@ class: exhibitions
     <li>
       <p class="description">{{ exhibition.description }}</p>
       <p class="location">{{ exhibition.location }}</p>
-      <a class="website" rel="noopener" target="_blank" href="{{ exhibition.link }}">{{ exhibition.link }}</a>
+      {% if exhibition.link %}
+        <a class="website" rel="noopener" target="_blank" href="{{ exhibition.link }}">{{ exhibition.link }}</a>
+      {% endif %}
     </li>
     {% endfor %}
   </ul>
@@ -32,15 +32,15 @@ class: exhibitions
     <a id="press-{{perYear.year}}" href="#press-{{perYear.year}}">{{perYear.year}}</a>
   </div>
   <ul>
-    {% for item in perYear.items %}
+    {% for press in perYear.items %}
     <li>
-      <p class="description">{{ item.title }}</p>
-      <p class="location">{{ item.location }}</p>
-      <a class="website" rel="noopener" target="_blank" href="{{ item.link  }}">
-        {% if isHttp.test(item.link) %}
-        {% else %}
-        {% endif %}
+      <p class="description">{{ press.title }}</p>
+      <p class="location">{{ press.location }}</p>
+      {% if press.link %}
+      <a class="website" rel="noopener" target="_blank" href="{{ press.link }}">
+        {{ press.link | url }}
       </a
+      {% endif %}
     </a>
   </li>
   {% endfor %}
