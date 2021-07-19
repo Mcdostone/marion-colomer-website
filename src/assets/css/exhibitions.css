@@ -1,7 +1,3 @@
-.exhibitions {
-  overflow-x: hidden;
-}
-
 .exhibitions .title {
   margin-bottom: 1rem;
 }
@@ -64,4 +60,10 @@
 
 .website:hover {
   color: black;
+}
+
+@media (max-width: 600px) {
+  .portrait {
+    width: 100%;
+  }
 }

@@ -44,7 +44,6 @@ main {
   margin: auto;
   margin-top: 1rem;
   margin-bottom: var(--border-size);
-  flex: 1;
 }
 
 .page-404 * {

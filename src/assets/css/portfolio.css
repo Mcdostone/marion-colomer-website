@@ -20,6 +20,7 @@
 
 .portfolio-item > a {
   width: 50%;
+  color: black;
 }
 
 .portfolio-item .title {

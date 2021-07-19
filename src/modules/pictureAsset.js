@@ -14,7 +14,7 @@ module.exports = async function pictureAsset(src, options = {}) {
   const color = await ColorThief.getColor(absPath)
   return `<img style="background:${rgbToHex(color)}" ${Object.entries(options)
     .map((e) => `${e[0]}="${e[1]}"`)
-    .join(' ')} width="${dimensions.width}" height="${dimensions.height}" src="${src}" alt="${options.alt}">`
+    .join(' ')} width="${dimensions.width}" height="${dimensions.height}" src="${src}">`
 }
 
 const rgbToHex = (array) =>

@@ -5,29 +5,28 @@ js: ['/assets/js/gallery.js']
 css: ['/assets/js/gallery.css']
 reload: true
 ---
-
-{% for item in portfolio %}
-  {% if page.url in item.link %}
+{%- for item in portfolio -%}
+  {%- if page.url in item.link -%}
     <div class="paintings" id="gallery">
-      {% for image in item.images %}
-        {% set url = "/assets/images/portfolio/" + image.src %}
+      {%- for image in item.images -%}
+        {%- set url = "/assets/images/portfolio/" + image.src -%}
         <a href="{{url}}" data-lg-size="{{ url | dimensions | join("-") }}">
-        {% pictureAsset url, {alt: image.alt}  %}
+        {%- pictureAsset url, {alt: image.alt}  -%}
         </a>
-      {% endfor %}
+      {%- endfor -%}
     </div>
     <article>
       <h1 class="title">{{ item.name }}</h1>
-      <h2>—  {{ item.year }}  —</h1>
+      <h2>—  {{ item.year }}  —</h2>
         {{ content | safe }}
-        {% if item.extra_links %}
+        {%- if item.extra_links -%}
         <ul class="extra-links">
-          {% for extra in item.extra_links %}
+          {%- for extra in item.extra_links -%}
           <li><a href="{{ extra.link }}">{{ extra.name }}</a></li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
-        {% endif %}
+        {%- endif -%}
       </article>
-      {% include "partials/controls.njk" %}
-  {% endif %}
-{% endfor %}
+      {%- include "partials/controls.njk" -%}
+  {%- endif -%}
+{%- endfor -%}

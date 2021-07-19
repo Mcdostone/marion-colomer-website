@@ -36,7 +36,6 @@ Website for the artist Marion Colomer. This project is developped with [Eleventy
 1. `npm run dev`
 1. After few seconds, you should be able to access the website: `https://localhost:8080/`
 
-
 ### Build the website
 
 ```bash

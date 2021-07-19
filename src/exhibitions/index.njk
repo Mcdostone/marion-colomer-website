@@ -3,47 +3,43 @@ layout: layouts/base.njk
 title: Exhibitions
 class: exhibitions
 ---
-
 <h2 class="title" id="exhibitions">Exhibitions</h2>
-{% for perYear in exhibitions | groupByYear("date.from") %}
+{%- for perYear in exhibitions | groupByYear("date.from") -%}
 <div class="per-year">
   <div>
     <a id="exhibition-{{perYear.year}}" href="#exhibition-{{perYear.year}}">{{perYear.year}}</a>
   </div>
   <ul>
-    {% for exhibition in perYear.items %}
+    {%- for exhibition in perYear.items -%}
     <li>
       <p class="description">{{ exhibition.description }}</p>
       <p class="location">{{ exhibition.location }}</p>
-      {% if exhibition.link %}
-        <a class="website" rel="noopener" target="_blank" href="{{ exhibition.link }}">{{ exhibition.link }}</a>
-      {% endif %}
+      {%- if exhibition.link -%}
+        <a class="website" rel="noopener noreferrer" target="_blank" href="{{ exhibition.link }}">{{ exhibition.link }}</a>
+      {%- endif -%}
     </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </div>
-{% endfor %}
-
-
+{%- endfor -%}
 <h2 class="title" id="press">Press</h2>
-{% for perYear in press | groupByYear("date") %}
+{%- for perYear in press | groupByYear("date") -%}
 <div class="per-year">
   <div>
     <a id="press-{{perYear.year}}" href="#press-{{perYear.year}}">{{perYear.year}}</a>
   </div>
   <ul>
-    {% for press in perYear.items %}
+    {%- for press in perYear.items -%}
     <li>
       <p class="description">{{ press.title }}</p>
       <p class="location">{{ press.location }}</p>
-      {% if press.link %}
-      <a class="website" rel="noopener" target="_blank" href="{{ press.link }}">
+      {%- if press.link -%}
+      <a class="website" rel="noopener noreferrer" target="_blank" href="{{ press.link }}">
         {{ press.link | url }}
-      </a
-      {% endif %}
-    </a>
+      </a>
+      {%- endif -%}
   </li>
-  {% endfor %}
+  {%- endfor -%}
 </ul>
 </div>
-{% endfor %}
+{%- endfor -%}

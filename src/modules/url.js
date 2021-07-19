@@ -7,7 +7,7 @@ const path = require('path')
  * @returns {string}
  */
 module.exports = function dimension(url) {
-  if(url.startsWith("http")) {
+  if (url.startsWith('http')) {
     return url
   }
   return path.basename(url)
