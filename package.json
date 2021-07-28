@@ -4,11 +4,11 @@
   "description": "",
   "scripts": {
     "eleventy:dev": "eleventy --serve --watch",
-    "vite:dev": "vite build --watch",
-    "dev": "npm-run-all --silent --continue-on-error eleventy:dev vite:dev",
-    "eleventy:build": "eleventy build",
+    "vite:dev": "vite build --watch --mode development",
+    "dev": "npm-run-all --parallel --silent --continue-on-error eleventy:dev vite:dev",
+    "eleventy:build": "ELEVENTY_ENV=production eleventy build",
     "vite:build": "vite build",
-    "build": "npm-run-all --continue-on-error eleventy:build vite:build",
+    "build": "npm-run-all --continue-on-error vite:build eleventy:build",
     "stylelint": "stylelint --config package.json --fix src/assets/css/*.css",
     "prettier": "prettier --check .",
     "lint": "npm-run-all --silent --continue-on-error stylelint prettier"
@@ -25,25 +25,23 @@
   "homepage": "https://github.com/Mcdostone/blog#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.3.1",
     "colorthief": "^2.3.2",
+    "fast-glob": "^3.2.7",
     "image-size": "^1.0.0",
-    "markdown-it": "^12.0.6",
-    "markdown-it-anchor": "^7.1.0",
+    "markdown-it": "^12.1.0",
+    "markdown-it-anchor": "^8.1.2",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.0.0-beta.2",
+    "postcss": "^8.3.6",
     "postcss-import-url": "^7.0.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.2",
     "rollup-plugin-terser": "^7.0.2",
-    "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0",
-    "terser": "^5.6.1",
-    "vite": "^2.4.2"
-  },
-  "peerDependencies": {
-    "postcss": "^8.2.10",
-    "vite": "^2.4.2"
+    "terser": "^5.7.1",
+    "vite": "^2.4.4"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
@@ -62,7 +60,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@hotwired/turbo": "^7.0.0-beta.8",
+    "@hotwired/turbo": "^7.0.0-rc.1",
     "lightgallery": "^2.1.8"
   }
 }

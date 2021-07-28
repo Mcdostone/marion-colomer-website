@@ -1,8 +1,6 @@
-const sizeOf = require('image-size')
 const path = require('path')
 
 /**
- * Shortcut function for downloading image assets
  * @param {string} url
  * @returns {string}
  */

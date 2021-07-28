@@ -4,13 +4,16 @@ const pictureAsset = require('./src/modules/pictureAsset')
 const groupByYear = require('./src/modules/groupByYear')
 const dimensions = require('./src/modules/dimensions')
 const url = require('./src/modules/url')
+const vite = require('./src/modules/vite')
+
+const isProduction = process.env.ELEVENTY_ENV === 'production'
+console.log(isProduction)
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats(['md', 'html', 'njk', 'css'])
+  eleventyConfig.setTemplateFormats(['md', 'html', 'njk', isProduction ? '' : 'css'])
   eleventyConfig.addPassthroughCopy('./src/favicon.svg')
   eleventyConfig.addPassthroughCopy('./src/assets/images')
   eleventyConfig.addPassthroughCopy('./src/assets/uploads')
-  eleventyConfig.addPassthroughCopy({ './src/assets/css': false })
   const engine = markdownIt({
     html: true,
   }).use(markdownItAnchor, {
@@ -23,6 +26,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode('pictureAsset', pictureAsset)
   eleventyConfig.addNunjucksFilter('groupByYear', groupByYear)
   eleventyConfig.addNunjucksFilter('url', url)
+  eleventyConfig.addNunjucksAsyncShortcode('vite', vite)
   eleventyConfig.addNunjucksFilter('dimensions', dimensions)
   eleventyConfig.setBrowserSyncConfig({
     https: true,

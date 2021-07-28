@@ -24,6 +24,14 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  color: transparent
+}
+
+.turbo-progress-bar {
+  background-color: black;
+}
+
 .full-bleed {
   width: 100%;
   padding: 0;

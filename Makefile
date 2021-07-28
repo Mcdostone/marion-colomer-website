@@ -4,8 +4,7 @@
 node_modules: package.json
 	npm install
 
-
-deploy: clean _site
+deploy: clean _site ## Deploy the website
 	$(MAKE) build
 	git clone git@github.com:Mcdostone/mcdostone.github.io.git website --depth 1
 	cp -r  $(word 2,$^)/* website/
@@ -17,9 +16,9 @@ deploy: clean _site
 _site: node_modules
 	npm run build
 
-build: _site
+build: _site ## Build the website
 
-clean:
+clean: ## Clean _site
 	rm -r _site
 
 help: ## Show this help !
