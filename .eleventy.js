@@ -7,7 +7,6 @@ const url = require('./src/modules/url')
 const vite = require('./src/modules/vite')
 
 const isProduction = process.env.ELEVENTY_ENV === 'production'
-console.log(isProduction)
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(['md', 'html', 'njk', isProduction ? '' : 'css'])
