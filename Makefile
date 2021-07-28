@@ -6,7 +6,8 @@ node_modules: package.json
 
 deploy: clean build ## Deploy the website
 	git clone git@github.com:Mcdostone/mcdostone.github.io.git website --depth 1
-	cp -r  $(word 2,$^)/* website/
+	rm -r website/*
+	cp -r _site/* website/
 	git -C website add .
 	git -C website commit -m "new update"
 	git -C website push
