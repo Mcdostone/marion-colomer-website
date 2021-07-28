@@ -1,11 +1,10 @@
 .DEFAULT_GOAL=help
-.PHONY: dev help clean build deploy
+.PHONY: help clean build deploy
 
 node_modules: package.json
 	npm install
 
-deploy: clean _site ## Deploy the website
-	$(MAKE) build
+deploy: clean build ## Deploy the website
 	git clone git@github.com:Mcdostone/mcdostone.github.io.git website --depth 1
 	cp -r  $(word 2,$^)/* website/
 	git -C website add .
