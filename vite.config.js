@@ -5,12 +5,20 @@ import { terser } from 'rollup-plugin-terser'
 export default ({ mode }) => {
   const isProduction = mode === 'production'
   return defineConfig({
+    root : 'src',
+    optimizeDeps: {
+      exclude: ['_site'],
+    },
+    server: {
+      strictPort: true,
+    },
     build: {
-      outDir: '_site',
-      publicDir: 'assets',
+      outDir: '../_site',
+      publicDir: false,
+      assetsDir: 'assets',
       emptyOutDir: false,
       sourcemap: !isProduction,
-      manifest: false,
+      manifest: isProduction,
       minify: isProduction ? 'terser' : false,
       rollupOptions: {
         plugins: [
@@ -25,6 +33,8 @@ export default ({ mode }) => {
           'js/gallery': path.resolve('src/assets/js/gallery.js'),
           'js/turbo': path.resolve('src/assets/js/turbo.js'),
           'css/style': path.resolve('src/assets/css/style.css'),
+          'favicon.svg': path.resolve('src/assets/favicon.svg'),
+          'images/icons.svg': path.resolve('src/assets/images/icons.svg'),
         },
         watch: {
           include: ['assets/css/**', 'assets/js/**'],

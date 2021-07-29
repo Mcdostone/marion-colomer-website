@@ -29,7 +29,9 @@
 .controls a svg {
   display: inline-block;
   height: 16px;
+  margin: 0;
   margin-right: var(--margin);
+  margin-bottom: 0.5rem;
   width: 16px;
   fill: black;
   transition: margin 0.25s ease-in-out;
@@ -37,7 +39,7 @@
 
 .controls .previous svg {
   transform: rotateZ(180deg);
-  margin: 0;
+  
   align-self: flex-start;
   margin-left: var(--margin);
 }

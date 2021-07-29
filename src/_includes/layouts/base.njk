@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{%- vite "/assets/css/style.css" -%}">
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    {% vite '/assets/css/style.css', 'link', { rel: 'stylesheet' } %}
+    {% vite '/assets/favicon.svg', 'link', { rel: 'icon', type: 'image/svg+xml' } %}
     <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:url" content="{{ site.title }}">
+    <meta property="og:url" content="{{ site.url }}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
     <meta property="og:site_name" content="{{ site.author }}">
@@ -14,10 +14,11 @@
     <meta property="og:description" content="{{ site.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0">
     <title>{{ title }} - {{ site.author }}</title>
-    {%- if reload %}<meta name="turbo-visit-control" content="reload">{%- endif -%}
-    <script type="module" src="{%- vite "/assets/js/turbo.js" -%}"></script>
-    {%- for link in js %}<script type="module" data-turbo-track="reload" src="{%- vite link -%}"></script>{%- endfor -%}
-    {%- for link in css %}<link rel="stylesheet" href="{%- vite link -%}">{%- endfor -%}
+    {%- if reload -%}<meta name="turbo-visit-control" content="reload">{%- endif -%}
+    {% vite '/assets/js/turbo.js', 'script' %}
+    {%- for link in js -%}{% vite link, 'script', { 'data-turbo-track': 'reload'} %}{%- endfor -%}
+    {%- for link in css -%}{% vite link, 'link', { rel: 'stylesheet' } %}{%- endfor -%}
+    {%- bootVite -%}
   </head>
   <body>
     {%- include "partials/navigation.njk" -%}

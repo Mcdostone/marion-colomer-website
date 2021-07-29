@@ -8,6 +8,7 @@ document.addEventListener('turbo:load', function () {
   }
   lightGallery(element, {
     animateThumb: false,
+    licenseKey: 'a',
     zoomFromOrigin: true,
     allowMediaOverlap: true,
     download: false,

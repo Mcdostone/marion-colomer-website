@@ -9,7 +9,7 @@ const ColorThief = require('colorthief')
  */
 module.exports = async function pictureAsset(src, options = {}) {
   options = Object.assign({}, { alt: '' }, options)
-  const absPath = path.join(path.resolve(__dirname, '..'), src)
+  const absPath = path.join(path.resolve(__dirname, '..'), 'src', src)
   const dimensions = sizeOf(absPath)
   const color = await ColorThief.getColor(absPath)
   return `<img style="background:${rgbToHex(color)}" ${Object.entries(options)

@@ -179,12 +179,21 @@
   }
 
   .portfolio-item .title {
+    margin-top: 1rem;
     font-size: 10vmin;
   }
 
   .portfolio-item .year,
   .portfolio-item .title {
     text-align: center;
+  }
+
+  .serie .title {
+    margin-top: 1.5rem;
+  }
+
+  .serie article h2 {
+    margin-bottom: 1.5rem;
   }
 
   .portfolio-item > div {

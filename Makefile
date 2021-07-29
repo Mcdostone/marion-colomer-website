@@ -1,7 +1,7 @@
 .DEFAULT_GOAL=help
 .PHONY: help clean build deploy
 
-node_modules: package.json
+node_modules:
 	npm install
 
 deploy: clean build ## Deploy the website

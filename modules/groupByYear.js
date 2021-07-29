@@ -1,6 +1,3 @@
-const sizeOf = require('image-size')
-const path = require('path')
-
 /**
  * * @param {Array} array
  * * @param {string} propertyPath

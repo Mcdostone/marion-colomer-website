@@ -7,7 +7,7 @@ const path = require('path')
  * @returns {string}
  */
 module.exports = function dimension(src) {
-  const absPath = path.join(path.resolve(__dirname, '..'), src)
+  const absPath = path.join(path.resolve(__dirname, '..'), 'src', src)
   const dimensions = sizeOf(absPath)
   return [dimensions.width, dimensions.height]
 }
