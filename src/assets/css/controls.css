@@ -4,26 +4,26 @@
   display: flex;
   justify-content: space-between;
   transition: color 0.25s ease-in-out;
-  padding: 0 var(--border-size);
+  padding: 1.25rem var(--border-size) 0 var(--border-size)
 }
 
 .controls a {
   --margin: 0.5rem;
 
-  color: var(--gray);
-  color: black;
+  color: var(--light-gray);
   display: flex;
+  fill: var(--light-gray);
   flex-direction: column;
   align-items: flex-end;
   text-decoration: none;
-  position: relative;
-  padding-top: 1.25rem;
-  opacity: 0.5;
+  position: relative
 }
 
 .controls a:hover {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  color: black;
+  fill: black;
+  transition: color 0.2s ease-in-out;
+  text-decoration: underline
 }
 
 .controls a svg {
@@ -33,22 +33,21 @@
   margin-right: var(--margin);
   margin-bottom: 0.5rem;
   width: 16px;
-  fill: black;
-  transition: margin 0.25s ease-in-out;
+  fill: inherit;
+  transition: margin 0.25s ease-in-out, fill 0.2s ease-in-out
 }
 
 .controls .previous svg {
   transform: rotateZ(180deg);
-  
   align-self: flex-start;
-  margin-left: var(--margin);
+  margin-left: var(--margin)
 }
 
 .controls a:hover svg {
   margin-right: 0;
-  transition: margin 0.2s ease-out;
+  transition: margin 0.2s ease-out, fill 0.2s ease-in-out
 }
 
 .controls a.previous:hover svg {
-  margin-left: 0;
+  margin-left: 0
 }
