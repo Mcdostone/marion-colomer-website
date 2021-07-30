@@ -141,7 +141,7 @@
 
 .portfolio-item .title a:hover,
 .portfolio-item > a:hover + div .title a {
-  border-bottom: 2px solid var(--dark)
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

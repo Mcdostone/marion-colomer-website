@@ -12,6 +12,11 @@ export default ({ mode }) => {
     server: {
       strictPort: true,
     },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'node_modules'),
+      },
+    },
     build: {
       outDir: '../_site',
       publicDir: false,
@@ -33,6 +38,7 @@ export default ({ mode }) => {
           'js/gallery': path.resolve('src/assets/js/gallery.js'),
           'js/turbo': path.resolve('src/assets/js/turbo.js'),
           'css/style': path.resolve('src/assets/css/style.css'),
+          'css/gallery': path.resolve('src/assets/css/gallery.css'),
           'favicon.svg': path.resolve('src/assets/favicon.svg'),
           'images/icons.svg': path.resolve('src/assets/images/icons.svg'),
         },

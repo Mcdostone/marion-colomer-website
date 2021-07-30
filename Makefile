@@ -16,10 +16,14 @@ deploy: clean build ## Deploy the website
 _site: node_modules
 	npm run build
 
+check-links: _site
+	@echo "php -S 127.0.0.1:8000 -t _site/"
+	npx broken-link-checker http://127.0.0.1:8000 -rfo
+
 build: _site ## Build the website
 
 clean: ## Clean _site
-	rm -r _site
+	rm -rf _site
 
 help: ## Show this help !
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

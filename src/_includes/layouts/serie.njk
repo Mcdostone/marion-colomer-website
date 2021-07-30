@@ -2,15 +2,15 @@
 layout: layouts/base.njk
 class: serie full-bleed
 js: ['/assets/js/gallery.js']
-css: ['/assets/js/gallery.css']
-reload: true
+css: ['/assets/css/gallery.css']
 ---
 {%- for item in portfolio -%}
   {%- if page.url in item.link -%}
     <div class="paintings" id="gallery">
       {%- for image in item.images -%}
         {%- set url = "/assets/images/portfolio/" + image.src -%}
-        <a href="{{url}}" data-lg-size="{{ url | dimensions | join("-") }}">
+        {%- set dimensions = url | dimensions  -%}
+        <a href="{{url}}" data-pswp-width="{{ dimensions[0] }}" data-pswp-height="{{ dimensions[1] }}">
         {%- pictureAsset url, {alt: image.alt}  -%}
         </a>
       {%- endfor -%}

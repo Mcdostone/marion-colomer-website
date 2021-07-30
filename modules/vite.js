@@ -4,8 +4,6 @@ const path = require('path')
 const fg = require('fast-glob')
 const document = new JSDOM('').window.document
 const isProduction = process.env.ELEVENTY_ENV === 'production'
-
-
 const viteUrl = isProduction ? viteUrlForProduction() : viteUrlForDevelopment
 
 function viteUrlForDevelopment(url) {
