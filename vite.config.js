@@ -23,7 +23,7 @@ export default ({ mode }) => {
       assetsDir: 'assets',
       emptyOutDir: false,
       sourcemap: !isProduction,
-      manifest: isProduction,
+      manifest: false,
       minify: isProduction ? 'terser' : false,
       rollupOptions: {
         plugins: [
@@ -39,7 +39,6 @@ export default ({ mode }) => {
           'js/turbo': path.resolve('src/assets/js/turbo.js'),
           'css/style': path.resolve('src/assets/css/style.css'),
           'css/gallery': path.resolve('src/assets/css/gallery.css'),
-          'images/favicon.svg': path.resolve('src/assets/images/favicon.svg')
         },
         watch: {
           include: ['assets/css/**', 'assets/js/**'],

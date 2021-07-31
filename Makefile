@@ -14,18 +14,17 @@ deploy: clean build ## Deploy the website
 	git -C website push
 	rm -rf website
 
-_site: node_modules
+_site/index.html: node_modules
 	npm run build
 	find _site -type f -name *.svg.*.js -exec rm {} \;
-	mv _site/assets/favicon* _site/assets/images/
 	find _site -type f -iname  "*.jpg" -print0 | xargs -0 -P$(NPROC) -I%  bash -c 'npx @squoosh/cli -d $$(dirname %) --mozjpeg "{}" %'
 	find _site -type f -iname  "*.svg" | xargs npx svgo
 
-check-links: _site
+check-links: _site/index.html
 	@echo "php -S 127.0.0.1:8000 -t _site/"
 	npx broken-link-checker http://127.0.0.1:8000 -rfo
 
-build: _site ## Build the website
+build: _site/index.html ## Build the website
 
 clean: ## Clean _site
 	rm -rf _site

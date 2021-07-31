@@ -10,7 +10,6 @@ const {vite, viteUrl, bootVite} = require('./modules/vite')
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(['md', 'html', 'njk'])
   eleventyConfig.addPassthroughCopy('./src/assets/images')
-  eleventyConfig.ignores = ['src/assets/images/favicon.svg']
   eleventyConfig.addPassthroughCopy('./src/assets/uploads')
   const engine = markdownIt({
     html: true,
