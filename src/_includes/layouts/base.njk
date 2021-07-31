@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     {% vite '/assets/css/style.css', 'link', { rel: 'stylesheet' } %}
-    {% vite '/assets/favicon.svg', 'link', { rel: 'icon', type: 'image/svg+xml' } %}
+    {% vite '/assets/images/favicon.svg', 'link', { rel: 'icon', type: 'image/svg+xml' } %}
     <meta property="og:title" content="{{ site.title }}">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:type" content="website">
@@ -23,6 +23,5 @@
   <body>
     {%- include "partials/navigation.njk" -%}
     <main class="{{ class }}">{{ content | safe }}</main>
-    
   </body>
 </html>

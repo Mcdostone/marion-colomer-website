@@ -17,7 +17,9 @@ deploy: clean build ## Deploy the website
 _site: node_modules
 	npm run build
 	find _site -type f -name *.svg.*.js -exec rm {} \;
+	mv _site/assets/favicon* _site/assets/images/
 	find _site -type f -iname  "*.jpg" -print0 | xargs -0 -P$(NPROC) -I%  bash -c 'npx @squoosh/cli -d $$(dirname %) --mozjpeg "{}" %'
+	find _site -type f -iname  "*.svg" | xargs npx svgo
 
 check-links: _site
 	@echo "php -S 127.0.0.1:8000 -t _site/"

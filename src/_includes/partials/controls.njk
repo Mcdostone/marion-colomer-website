@@ -13,15 +13,11 @@
           {%- set next = 0 -%}
       {%- endif -%}
       <a href="{{ sorted[previous].link }}" class="previous">
-      <svg>
-        <use href="/assets/images/icons.svg#arrow" />
-      </svg>
+      <span></span>
       {{ sorted[previous].name }} / {{ sorted[previous].year }}
       </a>
       <a href="{{ sorted[next].link }}" class="next">
-      <svg>
-        <use href="/assets/images/icons.svg#arrow" />
-      </svg>
+      <span></span>
       {{ sorted[next].name }} / {{ sorted[next].year }}
       </a>
     {%- endif -%}
