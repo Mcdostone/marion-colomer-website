@@ -20,7 +20,8 @@ _site/index.html: node_modules
 	find _site -type f -iname  "*.jpg" -print0 | xargs -0 -P$(NPROC) -I%  bash -c 'npx @squoosh/cli -d $$(dirname %) --mozjpeg "{}" %'
 	find _site -type f -iname  "*.svg" | xargs npx svgo
 
-check-links: _site/index.html
+check: _site/index.html
+	npx w3c-html-validator _site
 	@echo "php -S 127.0.0.1:8000 -t _site/"
 	npx broken-link-checker http://127.0.0.1:8000 -rfo
 
