@@ -1,7 +1,7 @@
 import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
 import PhotoSwipe from 'photoswipe/dist/photoswipe.esm.js';
 
-let gallery = undefined
+let gallery = null
 
 const arrowPrevSVG = `
 <svg id="arrow" viewBox="0 0 443.52 443.52" aria-hidden="true" class="pswp__icn">
@@ -15,7 +15,7 @@ const closeSVG = `<svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" cl
 
 function initGallery() {
   const element = document.getElementById('gallery')
-  if (!element) {
+  if (!element || gallery != null) {
     return
   }
   gallery = new PhotoSwipeLightbox({
@@ -45,3 +45,5 @@ document.addEventListener('turbo:before-render', e => {
 document.addEventListener('turbo:load', function () {
   initGallery()
 })
+
+initGallery()

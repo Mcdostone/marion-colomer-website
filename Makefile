@@ -1,5 +1,6 @@
 .DEFAULT_GOAL=help
 .PHONY: help clean build deploy
+NPROC=$(shell nproc)
 
 node_modules:
 	npm install
@@ -15,6 +16,8 @@ deploy: clean build ## Deploy the website
 
 _site: node_modules
 	npm run build
+	find _site -type f -name *.svg.*.js -exec rm {} \;
+	find _site -type f -iname  "*.jpg" -print0 | xargs -0 -P$(NPROC) -I%  bash -c 'npx @squoosh/cli -d $$(dirname %) --mozjpeg "{}" %'
 
 check-links: _site
 	@echo "php -S 127.0.0.1:8000 -t _site/"

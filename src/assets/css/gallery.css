@@ -6,8 +6,13 @@
   justify-content: center;
   align-items: center;
 }
+
 .pswp__button--zoom {
   display: none;
+}
+
+.pswp--touch .pswp__button--arrow {
+  visibility: unset
 }
 
 .pswp__button--arrow {
