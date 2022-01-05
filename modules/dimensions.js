@@ -2,9 +2,8 @@ const sizeOf = require('image-size')
 const path = require('path')
 
 /**
- * Shortcut function for downloading image assets
- * @param {file} src
- * @returns {string}
+ * @param {file} src Path to an image
+ * @returns {array<Number>} Width and height of the given image
  */
 module.exports = function dimension(src) {
   const absPath = path.join(path.resolve(__dirname, '..'), 'src', src)

@@ -41,7 +41,6 @@ function bootVite() {
 }
 
 /**
- * Shortcut function for downloading image assets
  * @param {string} url
  * @param {Object} attributes
  * @returns {string}

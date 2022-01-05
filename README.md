@@ -1,7 +1,7 @@
 <div align="center">
   <br>
   <img
-    alt="Marion colomer"
+    alt="Painting of 2 birds"
     src="./src/assets/images/portfolio/birds/1.jpg"
     width="200"
     style="border-radius: 7px"
@@ -33,7 +33,7 @@ Website for the artist Marion Colomer. This project is developped with [Eleventy
 ### Standard Installation
 
 1. Clone the repository, ie. `git clone https://github.com/Mcdostone/marion-colomer-website`
-1. `npm install` to install packaged
+1. `npm install` to install dependencies
 1. `npm run dev` or `make dev`
 1. After few seconds, you should be able to access the website: `https://localhost:8080/`
 
@@ -44,7 +44,7 @@ Website for the artist Marion Colomer. This project is developped with [Eleventy
 make build
 ```
 
-## Sniffing the old website
+## Retrieve the old website
 
 [Wayback Machine](https://archive.org/web/web.php) is your friend.
 
