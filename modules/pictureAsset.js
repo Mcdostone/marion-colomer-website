@@ -3,7 +3,7 @@ const path = require('path')
 const ColorThief = require('colorthief')
 
 // Disable color thief during development because it's slow
-const isProduction = process.env.ELEVENTY_ENV !== 'production'
+const isProduction = process.env.ELEVENTY_ENV === 'production'
 
 /**
  * Shortcut function for downloading image assets

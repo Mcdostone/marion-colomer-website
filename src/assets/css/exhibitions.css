@@ -1,3 +1,7 @@
+.exhibitions {
+  --gap: 1.5rem
+}
+
 .exhibitions .title {
   margin-bottom: 1rem
 }
@@ -19,7 +23,7 @@
 }
 
 .per-year + .per-year {
-  margin-top: 1rem
+  margin-top: var(--gap)
 }
 
 .exhibitions ul {
@@ -27,7 +31,7 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  gap: 0.75rem 0;
+  gap: var(--gap) 0;
   min-width: 0;
   flex: 1 1 0
 }
@@ -50,7 +54,7 @@
 .website,
 .location {
   color: black;
-  font-size: 0.75rem
+  font-size: 0.875rem
 }
 
 .website,

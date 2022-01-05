@@ -90,7 +90,7 @@
   max-width: calc(var(--container-width));
   position: relative;
   font-size: 0.875rem;
-  color: #454545
+  color: var(--dark)
 }
 
 .serie .controls {

@@ -18,7 +18,7 @@
 }
 
 .biography p {
-  color: var(--gray);
+  color: var(--dark);
   font-size: 0.875rem;
   text-align: justify;
   line-height: 2

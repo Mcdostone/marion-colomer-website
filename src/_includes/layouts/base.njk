@@ -18,10 +18,10 @@
     {%- for link in js -%}{% vite link, 'script' %}{%- endfor -%}
     {%- for link in css -%}{% vite link, 'link', { rel: 'stylesheet' } %}{%- endfor -%}
     {%- bootVite -%}
-    <!-- Website made by Yann Prono, https://github.com/Mcdostone/marion-colomer-website-->
   </head>
   <body>
     {%- include "partials/navigation.njk" -%}
     <main class="{{ class }}">{{ content | safe }}</main>
   </body>
+  <!-- Yann Prono, https://github.com/Mcdostone -->
 </html>

@@ -1,7 +1,7 @@
 FROM node:16-alpine as development
 WORKDIR /tmp/app
 COPY . .
-RUN apk --no-cache add make python3 build-base
+RUN apk --no-cache add make python3 build-base findutils bash
 RUN make build
 
 FROM alpine:latest
