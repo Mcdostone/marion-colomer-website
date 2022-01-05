@@ -1,5 +1,4 @@
-
-const {JSDOM } = require('jsdom')
+const { JSDOM } = require('jsdom')
 const path = require('path')
 const fg = require('fast-glob')
 const document = new JSDOM('').window.document
@@ -22,12 +21,12 @@ function viteUrlForProduction() {
   const query = path.join('assets', '**')
   const matches = fg.sync([query], { cwd, onlyFiles: true })
   const results = matches.reduce((accumulator, file) => {
-      const dirname = path.dirname(file)
-      const parts = path.basename(file).split('.')
-      accumulator[`/${dirname}/${parts[0]}.${parts[parts.length - 1]}`] = `/${file}`
-      return accumulator
+    const dirname = path.dirname(file)
+    const parts = path.basename(file).split('.')
+    accumulator[`/${dirname}/${parts[0]}.${parts[parts.length - 1]}`] = `/${file}`
+    return accumulator
   }, {})
-  return function(url) {
+  return function (url) {
     return results[url]
   }
 }
@@ -35,8 +34,10 @@ function viteUrlForProduction() {
 /**
  * @returns {string}
  */
- function bootVite() {
-  return isProduction ? '' : `<script type="module" src="http://localhost:3000/@vite/client"></script><script type="module" src="http://localhost:3000/src/client/main.js"></script>`
+function bootVite() {
+  return isProduction
+    ? ''
+    : `<script type="module" src="http://localhost:3000/@vite/client"></script><script type="module" src="http://localhost:3000/src/client/main.js"></script>`
 }
 
 /**
@@ -56,7 +57,7 @@ function vite(url, type, attributes = {}) {
  */
 function createElement(url, type, attributes = {}) {
   element = document.createElement(type)
-  switch(type) {
+  switch (type) {
     case 'link':
       attributes['href'] = url
       break
@@ -64,16 +65,14 @@ function createElement(url, type, attributes = {}) {
       attributes['type'] = 'module'
       attributes['src'] = url
   }
-  for(const key in attributes) {
+  for (const key in attributes) {
     element.setAttribute(key, attributes[key])
   }
   return element
 }
 
-
 module.exports = {
   bootVite,
   vite,
-  viteUrl
+  viteUrl,
 }
-

@@ -1,5 +1,5 @@
-import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
-import PhotoSwipe from 'photoswipe/dist/photoswipe.esm.js';
+import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js'
+import PhotoSwipe from 'photoswipe/dist/photoswipe.esm.js'
 
 let gallery = null
 
@@ -30,13 +30,13 @@ function initGallery() {
     secondaryZoomLevel: 'fit',
     maxZoomLevel: 'fit',
     pinchToClose: false,
-    pswpModule: PhotoSwipe
-  });
-  gallery.init();
+    pswpModule: PhotoSwipe,
+  })
+  gallery.init()
 }
 
-document.addEventListener('turbo:before-render', e => {
-  if(gallery !== null) {
+document.addEventListener('turbo:before-render', (e) => {
+  if (gallery !== null) {
     gallery.destroy()
     gallery = null
   }

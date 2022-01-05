@@ -4,7 +4,7 @@ const path = require('path')
  * @param {string} url
  * @returns {string}
  */
-module.exports = function dimension(url) {
+module.exports = function urlFor(url) {
   if (url.startsWith('http')) {
     return url
   }

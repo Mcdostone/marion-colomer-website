@@ -37,13 +37,13 @@
   font-size: 1rem;
   font-weight: 100;
   text-align: right;
-  margin: 1rem 0 1.5rem 0
+  margin: 1rem 0 1.5rem
 }
 
 .portfolio-item img {
   width: 100%;
   height: auto;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%)
 }
 
 .portfolio-item .button {
@@ -57,7 +57,7 @@
 
 .serie article {
   padding: 0 var(--border-size);
-  margin: 1rem auto auto auto
+  margin: 1rem auto auto
 }
 
 .paintings {
@@ -77,7 +77,7 @@
 }
 
 .paintings img {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
   object-fit: contain;
   width: auto;
   max-height: 66vh;
@@ -106,7 +106,7 @@
 }
 
 .serie .title {
-  margin: 3rem 0 0 0
+  margin: 3rem 0 0
 }
 
 .serie article h2,

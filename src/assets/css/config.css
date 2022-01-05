@@ -19,15 +19,15 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     Avenir,
-    Avenir Next,
-    Segoe UI,
+    "Avenir Next",
+    "Segoe UI",
     Roboto,
     Oxygen,
     Ubuntu,
     Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   display: grid;
   grid-template-columns: 1fr min(var(--container-width), 100%) 1fr;

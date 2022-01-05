@@ -5,7 +5,7 @@ import { terser } from 'rollup-plugin-terser'
 export default ({ mode }) => {
   const isProduction = mode === 'production'
   return defineConfig({
-    root : 'src',
+    root: 'src',
     optimizeDeps: {
       exclude: ['_site'],
     },
@@ -45,7 +45,7 @@ export default ({ mode }) => {
         },
         output: {
           manualChunks: undefined,
-        }
+        },
       },
     },
   })

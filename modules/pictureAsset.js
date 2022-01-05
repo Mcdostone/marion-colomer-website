@@ -2,8 +2,8 @@ const sizeOf = require('image-size')
 const path = require('path')
 const ColorThief = require('colorthief')
 
-
-const isProduction = process.env.ELEVENTY_ENV === 'production'
+// Disable color thief during development because it's slow
+const isProduction = process.env.ELEVENTY_ENV !== 'production'
 
 /**
  * Shortcut function for downloading image assets
@@ -20,11 +20,18 @@ module.exports = async function pictureAsset(src, options = {}) {
     .join(' ')} width="${dimensions.width}" height="${dimensions.height}" src="${src}">`
 }
 
-const rgbToHex = (array) =>
-  '#' +
-  array
-    .map((x) => {
-      const hex = x.toString(16)
-      return hex.length === 1 ? '0' + hex : hex
-    })
-    .join('')
+/**
+ * @param {array<Number>} array
+ * @return {string}
+ */
+function rgbToHex(array) {
+  return (
+    '#' +
+    array
+      .map((x) => {
+        const hex = x.toString(16)
+        return hex.length === 1 ? '0' + hex : hex
+      })
+      .join('')
+  )
+}

@@ -1,6 +1,6 @@
 .DEFAULT_GOAL=help
 .PHONY: help clean build deploy
-NPROC=$(shell nproc)
+NPROC := $(shell nproc)
 
 node_modules:
 	npm install
@@ -20,7 +20,10 @@ _site/index.html: node_modules
 	find _site -type f -iname  "*.jpg" -print0 | xargs -0 -P$(NPROC) -I%  bash -c 'npx @squoosh/cli -d $$(dirname %) --mozjpeg "{}" %'
 	find _site -type f -iname  "*.svg" | xargs npx svgo
 
-check: _site/index.html
+dev: node_modules ## Start the dev server
+	npm run dev
+
+check: _site/index.html ## Make sure HTML is correct and URLs are up
 	npx w3c-html-validator _site
 	@echo "php -S 127.0.0.1:8000 -t _site/"
 	npx broken-link-checker http://127.0.0.1:8000 -rfo
@@ -30,5 +33,9 @@ build: _site/index.html ## Build the website
 clean: ## Clean _site
 	rm -rf _site
 
-help: ## Show this help !
-	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+help: ## Show this help
+	@echo "Variables:"
+	@make -pn | grep -A1 "^# makefile (" | grep -v "^#\|^--\|^MAKEFILE_LIST" | sort | uniq | awk 'BEGIN {FS = ":?= "}; {printf "  \033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@echo "\nTargets:"
+	@grep -E '^[/a-zA-Z0-9_-]+: .*?## .*$$' $(MAKEFILE_LIST) | sort | awk  'BEGIN {FS = ": .*?## "}; {printf "  \033[36m%-30s\033[0m %s\n", $$1, $$2}'
+

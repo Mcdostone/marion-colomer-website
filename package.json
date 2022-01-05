@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "marion-colomer-website",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -15,36 +15,36 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mcdostone/blog.git"
+    "url": "git+https://github.com/Mcdostone/marion-colomer-website.git"
   },
-  "author": "",
+  "author": "Yann Prono",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mcdostone/blog/issues"
+    "url": "https://github.com/Mcdostone/marion-colomer-website/issues"
   },
-  "homepage": "https://github.com/Mcdostone/blog#readme",
+  "homepage": "https://github.com/Mcdostone/marion-colomer-website",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@squoosh/cli": "^0.7.2",
-    "autoprefixer": "^10.3.1",
+    "autoprefixer": "^10.4.1",
     "colorthief": "^2.3.2",
     "fast-glob": "^3.2.7",
     "image-size": "^1.0.0",
-    "jsdom": "^16.6.0",
-    "markdown-it": "^12.1.0",
-    "markdown-it-anchor": "^8.1.2",
+    "jsdom": "^19.0.0",
+    "markdown-it": "^12.3.0",
+    "markdown-it-anchor": "^8.4.1",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.0.0-beta.2",
-    "postcss": "^8.3.6",
+    "parcel": "^2.0.1",
+    "postcss": "^8.4.5",
     "postcss-import-url": "^7.0.0",
-    "prettier": "^2.3.2",
+    "prettier": "^2.5.1",
     "rollup-plugin-terser": "^7.0.2",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-prettier": "^1.2.0",
-    "svgo": "^2.3.1",
-    "terser": "^5.7.1",
-    "vite": "^2.4.4"
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "svgo": "^2.8.0",
+    "terser": "^5.10.0",
+    "vite": "^2.7.10"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
@@ -54,7 +54,8 @@
     "rules": {
       "declaration-block-no-redundant-longhand-properties": true,
       "declaration-block-trailing-semicolon": "never",
-      "prettier/prettier": true
+      "prettier/prettier": true,
+      "selector-class-pattern": "^(([a-z][a-z0-9]*)(-[a-z0-9]+)*|pswp.*)$"
     }
   },
   "prettier": {
@@ -63,7 +64,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@hotwired/turbo": "^7.0.0-rc.1",
+    "@hotwired/turbo": "^7.1.0",
     "photoswipe": "github:dimsemenov/photoswipe#v5-beta"
   }
 }

@@ -1,4 +1,4 @@
-@import '@/photoswipe/dist/photoswipe.css';
+@import "@/photoswipe/dist/photoswipe.css";
 
 .pswp__button {
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .pswp__button--arrow {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgb(0 0 0 / 45%);
   border-radius: 2px;
   color: #999;
   cursor: pointer;
@@ -54,7 +54,7 @@
 .pswp__button--arrow:hover,
 .pswp__button--arrow:active,
 .pswp__button--arrow:focus {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgb(0 0 0 / 45%);
   padding: 8px 10px 9px
 }
 

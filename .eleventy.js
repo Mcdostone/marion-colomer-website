@@ -4,8 +4,7 @@ const pictureAsset = require('./modules/pictureAsset')
 const groupByYear = require('./modules/groupByYear')
 const dimensions = require('./modules/dimensions')
 const url = require('./modules/url')
-const {vite, viteUrl, bootVite} = require('./modules/vite')
-
+const { vite, viteUrl, bootVite } = require('./modules/vite')
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(['md', 'html', 'njk'])
@@ -39,9 +38,6 @@ module.exports = function (eleventyConfig) {
       },
     },
   })
-  //eleventyConfig.addWatchTarget('src/**/*.js')
-  //eleventyConfig.addWatchTarget('module/*.js')
-  //eleventyConfig.addWatchTarget('src/**/*.css')
   return {
     dir: {
       input: 'src',
