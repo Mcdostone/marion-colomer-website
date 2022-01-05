@@ -6,7 +6,7 @@ const ColorThief = require('colorthief')
 const isProduction = process.env.ELEVENTY_ENV === 'production'
 
 /**
- * 
+ *
  * @param {file} src Path to the image
  * @returns {string} img HTML tag with the dimensions and the main color of the given image
  */

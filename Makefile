@@ -30,8 +30,17 @@ check: _site/index.html ## Make sure HTML is correct and URLs are up
 
 build: _site/index.html ## Build the website
 
+purgecss: build ## Make sure the CSS doesn't contain unused rules
+	mkdir -p tmp
+	cp _site/assets/css/style*.css tmp/original.css
+	npx purgecss --css tmp/original.css --content $$(find _site/ -type f -regex ".*.html") -s "turbo-progress-bar" -o tmp/purge.css
+	npx cssbeautify-cli -f tmp/original.css | sed -e 1d > tmp/style.css
+	npx cssbeautify-cli -f tmp/purge.css | sed -e 1d > tmp/purged.css
+	diff --color=always tmp/style.css tmp/purged.css || true
+	rm tmp/original.css tmp/purge.css
+
 clean: ## Clean _site
-	rm -rf _site
+	rm -rf _site tmp
 
 help: ## Show this help
 	@echo "Variables:"
