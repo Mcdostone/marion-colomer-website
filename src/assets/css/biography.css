@@ -28,10 +28,6 @@
   margin-top: 0
 }
 
-.biography h1 {
-  color: white
-}
-
 @media (max-width: 800px) {
   .biography {
     display: flex;
