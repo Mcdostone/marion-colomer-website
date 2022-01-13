@@ -39,7 +39,10 @@ body {
 }
 
 img {
-  color: transparent
+  color: transparent;
+  width: 100%;
+  height: auto;
+  float: left;
 }
 
 picture {

@@ -6,7 +6,7 @@ const isProduction = process.env.ELEVENTY_ENV === 'production'
 const viteUrl = isProduction ? viteUrlForProduction() : viteUrlForDevelopment
 
 function viteUrlForDevelopment(url) {
-  const viteUrl = new URL('http://localhost:3000')
+  const viteUrl = new URL(process.env.VITE_URL || 'http://localhost:3000')
   viteUrl.pathname = url
   return viteUrl.toString()
 }
@@ -37,7 +37,7 @@ function viteUrlForProduction() {
 function bootVite() {
   return isProduction
     ? ''
-    : `<script type="module" src="http://localhost:3000/@vite/client"></script><script type="module" src="http://localhost:3000/src/client/main.js"></script>`
+    : `<script type="module" src="${viteUrlForDevelopment('@vite/client')}"></script><script type="module" src="${viteUrlForDevelopment('src/client/main.js')}"></script>`
 }
 
 /**
