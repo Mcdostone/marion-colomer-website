@@ -7,7 +7,7 @@ const isProduction = process.env.ELEVENTY_ENV === 'production'
 
 /**
  *
- * @param {file} src Path to the image
+ * @param {src} Path to the image
  * @returns {string} img HTML tag with the dimensions and the main color of the given image
  */
 module.exports = async function pictureAsset(src, options = {}) {
@@ -15,9 +15,15 @@ module.exports = async function pictureAsset(src, options = {}) {
   const absPath = path.join(path.resolve(__dirname, '..'), 'src', src)
   const dimensions = sizeOf(absPath)
   const color = isProduction ? await ColorThief.getColor(absPath) : [0, 0, 0]
-  return `<img style="background:${rgbToHex(color)}" ${Object.entries(options)
-    .map((e) => `${e[0]}="${e[1]}"`)
-    .join(' ')} width="${dimensions.width}" height="${dimensions.height}" src="${src}">`
+  options["width"] = dimensions.width
+  options["height"] = dimensions.height
+  const withoutExtension = path.join(path.dirname(src), path.basename(src, path.extname(src)))
+
+  return `<picture style="--primaryColor:${rgbToHex(color)}">
+  ${isProduction ? `<source srcset="${withoutExtension}.avif" type="image/avif" />` : ''}
+  <img src="${src}" ${Object.entries(options).map((e) => `${e[0]}="${e[1]}"`).join(' ')}/>
+</picture>`
+
 }
 
 /**

@@ -17,6 +17,7 @@ deploy: clean build ## Deploy the website
 _site/index.html: node_modules
 	npm run build
 	find _site -type f -name *.svg.*.js -exec rm {} \;
+	find _site -type f -iname  "*.jpg" -print0 | xargs -0 -P$(NPROC) -I%  bash -c 'npx @squoosh/cli -d $$(dirname %) --avif "{}" %'
 	find _site -type f -iname  "*.jpg" -print0 | xargs -0 -P$(NPROC) -I%  bash -c 'npx @squoosh/cli -d $$(dirname %) --mozjpeg "{}" %'
 	find _site -type f -iname  "*.svg" | xargs npx svgo
 

@@ -42,6 +42,12 @@ img {
   color: transparent
 }
 
+picture {
+  display: inline-block;
+  width: 100%;
+  background: var(--primaryColor, #fff)
+}
+
 .turbo-progress-bar {
   background-color: black
 }

@@ -9,7 +9,7 @@ css: ['/assets/css/gallery.css']
     <div class="paintings" id="gallery">
       {%- for image in item.images -%}
         {%- set url = "/assets/images/portfolio/" + image.src -%}
-        {%- set dimensions = url | dimensions  -%}
+        {%- set dimensions = url | dimensions -%}
         <a aria-label="Open the image" href="{{url}}" data-pswp-width="{{ dimensions[0] }}" data-pswp-height="{{ dimensions[1] }}">
         {%- pictureAsset url, {alt: image.alt, loading: "lazy"}  -%}
         </a>
