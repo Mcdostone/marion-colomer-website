@@ -28,7 +28,7 @@
     "@squoosh/cli": "^0.7.2",
     "autoprefixer": "^10.4.2",
     "colorthief": "^2.3.2",
-    "fast-glob": "^3.2.10",
+    "fast-glob": "^3.2.11",
     "image-size": "^1.0.1",
     "jsdom": "^19.0.0",
     "markdown-it": "^12.3.2",
