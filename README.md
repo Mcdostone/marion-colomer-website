@@ -34,7 +34,7 @@ Website for the artist Marion Colomer. This project is developped with [Eleventy
 
 1. Clone the repository, ie. `git clone https://github.com/Mcdostone/marion-colomer-website`
 1. `npm install` to install dependencies
-1. `npm run dev` or `make dev`
+1. `npm run dev` or `make dev` or `make dev HOST=0.0.0.0`
 1. After few seconds, you should be able to access the website: `https://localhost:8080/`
 
 ### Build the website

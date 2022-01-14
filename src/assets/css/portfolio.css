@@ -101,7 +101,7 @@
 
 .serie .title {
   margin: 3rem 0 0;
-  font-weight: 300;
+  font-weight: 300
 }
 
 .serie article h2,
@@ -176,8 +176,7 @@
 
   .portfolio-item .year,
   .portfolio-item .title {
-    text-align: center;
-    font-weight: 300;
+    text-align: center
   }
 
   .serie .title {

@@ -70,4 +70,8 @@
   .portrait {
     width: 100%
   }
+
+  .per-year > div:first-child a {
+    font-weight: 400
+  }
 }

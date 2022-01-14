@@ -1,9 +1,12 @@
 const { JSDOM } = require('jsdom')
 const path = require('path')
+const os = require('os')
 const fg = require('fast-glob')
 const document = new JSDOM('').window.document
 const isProduction = process.env.ELEVENTY_ENV === 'production'
 const viteUrl = isProduction ? viteUrlForProduction() : viteUrlForDevelopment
+
+process.env.VITE_URL ||= `http://${getHost(process.env.HOST)}:3000`
 
 function viteUrlForDevelopment(url) {
   const viteUrl = new URL(process.env.VITE_URL || 'http://localhost:3000')
@@ -69,6 +72,23 @@ function createElement(url, type, attributes = {}) {
   }
   return element
 }
+
+/** @return {string} */
+function getHost(hostname) {
+  if(hostname === '127.0.0.1' || hostname === 'localhost') {
+    return 'localhost'
+  }
+  return Object.values(os.networkInterfaces())
+  .flatMap((nInterface) => nInterface ?? [])
+  .filter((detail) => detail && detail.address && detail.family === 'IPv4')
+  .map((detail) => {
+    const type = detail.address.includes('127.0.0.1')
+      ? 'Local:   '
+      : 'Network: '
+    return detail.address.replace('127.0.0.1', hostname)
+  }).slice(-1)
+}
+
 
 module.exports = {
   bootVite,
