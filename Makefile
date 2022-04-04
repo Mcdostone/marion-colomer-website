@@ -43,7 +43,7 @@ purgecss: ## Make sure the CSS doesn't contain unused rules
 	npx purgecss --css tmp/original.css --content $$(find _site/ -type f -regex ".*.html") -s "turbo-progress-bar" -o tmp/purge.css
 	npx cssbeautify-cli -f tmp/original.css | sed -e 1d > tmp/style.css
 	npx cssbeautify-cli -f tmp/purge.css | sed -e 1d > tmp/purged.css
-	diff --color=always tmp/style.css tmp/purged.css || true
+	diff tmp/style.css tmp/purged.css || true
 	rm tmp/original.css tmp/purge.css
 
 clean: ## Clean _site

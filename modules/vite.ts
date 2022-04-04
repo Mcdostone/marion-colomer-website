@@ -1,7 +1,7 @@
-const { JSDOM } = require('jsdom')
-const path = require('path')
-const os = require('os')
-const fg = require('fast-glob')
+import { JSDOM } from 'jsdom'
+import path from 'path'
+import os from 'os'
+import fg from 'fast-glob'
 const document = new JSDOM('').window.document
 const isProduction = process.env.ELEVENTY_ENV === 'production'
 const viteUrl = isProduction ? viteUrlForProduction() : viteUrlForDevelopment
@@ -40,7 +40,9 @@ function viteUrlForProduction() {
 function bootVite() {
   return isProduction
     ? ''
-    : `<script type="module" src="${viteUrlForDevelopment('@vite/client')}"></script><script type="module" src="${viteUrlForDevelopment('src/client/main.js')}"></script>`
+    : `<script type="module" src="${viteUrlForDevelopment('@vite/client')}"></script><script type="module" src="${viteUrlForDevelopment(
+        'src/client/main.js'
+      )}"></script>`
 }
 
 /**
@@ -58,7 +60,7 @@ function vite(url, type, attributes = {}) {
  * @returns {string}
  */
 function createElement(url, type, attributes = {}) {
-  element = document.createElement(type)
+  const element = document.createElement(type)
   switch (type) {
     case 'link':
       attributes['href'] = url
@@ -75,23 +77,17 @@ function createElement(url, type, attributes = {}) {
 
 /** @return {string} */
 function getHost(hostname) {
-  if(hostname === '127.0.0.1' || hostname === 'localhost') {
+  if (hostname === '127.0.0.1' || hostname === 'localhost') {
     return 'localhost'
   }
   return Object.values(os.networkInterfaces())
-  .flatMap((nInterface) => nInterface ?? [])
-  .filter((detail) => detail && detail.address && detail.family === 'IPv4')
-  .map((detail) => {
-    const type = detail.address.includes('127.0.0.1')
-      ? 'Local:   '
-      : 'Network: '
-    return detail.address.replace('127.0.0.1', hostname)
-  }).slice(-1)
+    .flatMap((nInterface) => nInterface ?? [])
+    .filter((detail) => detail && detail.address && detail.family === 'IPv4')
+    .map((detail) => {
+      const type = detail.address.includes('127.0.0.1') ? 'Local:   ' : 'Network: '
+      return detail.address.replace('127.0.0.1', hostname)
+    })
+    .slice(-1)
 }
 
-
-module.exports = {
-  bootVite,
-  vite,
-  viteUrl,
-}
+export { bootVite, vite, viteUrl }

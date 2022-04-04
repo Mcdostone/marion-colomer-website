@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite'
-import path from 'path'
+import { fileURLToPath } from 'node:url'
+import path from 'node:path'
 import { terser } from 'rollup-plugin-terser'
 
 export default ({ mode }) => {
   const isProduction = mode === 'production'
+  const dirname = path.dirname(fileURLToPath(import.meta.url))
   return defineConfig({
     root: 'src',
     optimizeDeps: {
@@ -14,7 +16,7 @@ export default ({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'node_modules'),
+        '@': path.resolve(dirname, 'node_modules'),
       },
     },
     build: {

@@ -11,7 +11,8 @@
     "build": "npm-run-all --continue-on-error build:vite build:eleventy",
     "stylelint": "stylelint --config package.json --fix src/assets/css/*.css",
     "prettier": "prettier --check .",
-    "lint": "npm-run-all --silent --continue-on-error stylelint prettier"
+    "eslint": "eslint",
+    "lint": "npm-run-all --silent --continue-on-error stylelint prettier eslint"
   },
   "repository": {
     "type": "git",
@@ -26,25 +27,29 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@squoosh/cli": "^0.7.2",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.4",
     "colorthief": "^2.3.2",
+    "eslint": "^8.12.0",
+    "eslint-plugin-unicorn": "^42.0.0",
     "fast-glob": "^3.2.11",
     "image-size": "^1.0.1",
     "jsdom": "^19.0.0",
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.4.1",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.2.0",
-    "postcss": "^8.4.5",
+    "parcel": "^2.4.1",
+    "postcss": "^8.4.12",
     "postcss-import-url": "^7.0.0",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "rollup-plugin-terser": "^7.0.2",
-    "stylelint": "^14.2.0",
-    "stylelint-config-standard": "^24.0.0",
+    "stylelint": "^14.6.1",
+    "stylelint-config-standard": "^25.0.0",
     "stylelint-prettier": "^2.0.0",
     "svgo": "^2.8.0",
-    "terser": "^5.10.0",
-    "vite": "^2.7.12"
+    "terser": "^5.12.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.1"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
@@ -63,8 +68,14 @@
     "semi": false,
     "singleQuote": true
   },
+  "eslintConfig": {
+    "extends": "plugin:unicorn/recommended"
+  },
   "dependencies": {
     "@hotwired/turbo": "^7.1.0",
-    "photoswipe": "github:dimsemenov/photoswipe#v5-beta"
+    "photoswipe": "^5.2.2"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }
