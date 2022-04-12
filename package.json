@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev:eleventy": "eleventy --serve --watch",
+    "dev:eleventy": "ELEVENTY_ENV=production eleventy --serve --watch",
     "dev:vite": "vite --mode development --host $HOST",
     "dev": "npm-run-all --parallel --silent --continue-on-error dev:eleventy dev:vite",
-    "build:eleventy": "ELEVENTY_ENV=production eleventy",
+    "build:eleventy": "PATH_PREFIX=marion-colomer ELEVENTY_ENV=production eleventy",
     "build:vite": "vite build",
     "build": "npm-run-all --continue-on-error build:vite build:eleventy",
     "stylelint": "stylelint --config package.json --fix src/assets/css/*.css",
@@ -29,13 +29,13 @@
     "@squoosh/cli": "^0.7.2",
     "autoprefixer": "^10.4.4",
     "colorthief": "^2.3.2",
-    "eslint": "^8.12.0",
+    "eslint": "^8.13.0",
     "eslint-plugin-unicorn": "^42.0.0",
     "fast-glob": "^3.2.11",
     "image-size": "^1.0.1",
     "jsdom": "^19.0.0",
     "markdown-it": "^12.3.2",
-    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-anchor": "^8.6.2",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.4.1",
     "postcss": "^8.4.12",
@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@hotwired/turbo": "^7.1.0",
-    "photoswipe": "^5.2.2"
+    "photoswipe": "^5.2.4"
   },
   "volta": {
     "node": "16.14.2"

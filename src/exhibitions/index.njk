@@ -15,7 +15,7 @@ class: exhibitions
       <p class="description">{{ exhibition.description }}</p>
       <p class="location">{{ exhibition.location }}</p>
       {%- if exhibition.link -%}
-        <a class="website" rel="noopener noreferrer" target="_blank" href="{{ exhibition.link }}">{{ exhibition.link }}</a>
+        <a class="website" rel="noopener noreferrer" target="_blank" href="{{ exhibition.link | url }}">{{ exhibition.link | url }}</a>
       {%- endif -%}
     </li>
     {%- endfor -%}
@@ -34,7 +34,7 @@ class: exhibitions
       <p class="description">{{ press.title }}</p>
       <p class="location">{{ press.location }}</p>
       {%- if press.link -%}
-      <a class="website" rel="noopener noreferrer" target="_blank" href="{{ press.link }}">
+      <a class="website" rel="noopener noreferrer" target="_blank" href="{{ press.link | url }}">
         {{ press.link | url }}
       </a>
       {%- endif -%}

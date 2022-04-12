@@ -26,7 +26,7 @@ function viteUrlForProduction() {
   const results = matches.reduce((accumulator, file) => {
     const dirname = path.dirname(file)
     const parts = path.basename(file).split('.')
-    accumulator[`/${dirname}/${parts[0]}.${parts[parts.length - 1]}`] = `/${file}`
+    accumulator[`/${dirname}/${parts[0]}.${parts[parts.length - 1]}`] = path.join('/', global.pathPrefix, file)
     return accumulator
   }, {})
   return function (url) {

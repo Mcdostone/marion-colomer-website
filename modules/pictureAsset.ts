@@ -17,13 +17,13 @@ async function pictureAsset(src, options = {}) {
   const color = isProduction ? await ColorThief.getColor(absPath) : [0, 0, 0]
   options['width'] = dimensions.width
   options['height'] = dimensions.height
-  const withoutExtension = path.join(path.dirname(src), path.basename(src, path.extname(src)))
+  const withoutExtension = path.join('/', this.ctx.pathPrefix, path.dirname(src), path.basename(src, path.extname(src)))
   const cls = options['class'] ? ` class="${options['class']}"` : ''
   delete options['class']
 
   return `<picture${cls} style="--primary-color:${rgbToHex(color)}">
   ${isProduction ? `<source srcset="${withoutExtension}.avif" type="image/avif" />` : ''}
-  <img src="${src}" ${Object.entries(options)
+  <img src="${path.join('/', this.ctx.pathPrefix, src)}" ${Object.entries(options)
     .map((e) => `${e[0]}="${e[1]}"`)
     .join(' ')}/>
 </picture>`

@@ -6,10 +6,10 @@ HOST ?= 127.0.0.1
 node_modules:
 	npm install
 
-deploy: clean build ## Deploy the website
+deploy: build ## Deploy the website
 	git clone git@github.com:Mcdostone/mcdostone.github.io.git website --depth 1
-	rm -r website/*
-	cp -r _site/* website/
+	-rm -r website/marion-colomer
+	cp -r _site website/marion-colomer
 	git -C website add .
 	git -C website commit -m "new update"
 	git -C website push

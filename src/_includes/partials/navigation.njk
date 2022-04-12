@@ -1,9 +1,9 @@
 <header>
-  <a href="/" class="logo" aria-label="Marion Colomer">Marion<br>Colomer</a>
+  <a href="{{ '/' | url }}" class="logo" aria-label="Marion Colomer">Marion<br>Colomer</a>
   <nav>
     <ul>
       {%- for item in site.navigation -%}
-        <li><a href="{{ item.link }}" {%- if page.url == item.link %} class="current" {%- endif -%}>{{ item.name }}</a>
+        <li><a href="{{ item.link | url }}" {%- if page.url == item.link %} class="current" {%- endif -%}>{{ item.name }}</a>
       {%- endfor -%}
     </ul>
   </nav>

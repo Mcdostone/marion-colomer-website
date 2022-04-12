@@ -8,10 +8,10 @@ css: ['/assets/css/gallery.css']
   {%- if page.url in item.link -%}
     <div class="paintings" id="gallery">
       {%- for image in item.images -%}
-        {%- set url = "/assets/images/portfolio/" + image.src -%}
-        {%- set dimensions = url | dimensions -%}
-        <a aria-label="Open the image" href="{{url}}" data-pswp-width="{{ dimensions[0] }}" data-pswp-height="{{ dimensions[1] }}">
-        {%- pictureAsset url, {alt: image.alt, loading: "lazy"}  -%}
+        {%- set urlImage= "/assets/images/portfolio/" + image.src -%}
+        {%- set dimensions = urlImage | dimensions -%}
+        <a aria-label="Open the image" href="{{urlImage | url}}" data-pswp-width="{{ dimensions[0] }}" data-pswp-height="{{ dimensions[1] }}">
+        {%- pictureAsset urlImage, {alt: image.alt, loading: "lazy"}  -%}
         </a>
       {%- endfor -%}
     </div>
@@ -22,7 +22,7 @@ css: ['/assets/css/gallery.css']
         {%- if item.extra_links -%}
         <ul class="extra-links">
           {%- for extra in item.extra_links -%}
-          <li><a href="{{ extra.link }}">{{ extra.name }}</a></li>
+          <li><a href="{{ extra.link | url }}">{{ extra.name }}</a></li>
           {%- endfor -%}
         </ul>
         {%- endif -%}

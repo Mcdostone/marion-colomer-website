@@ -12,11 +12,11 @@
       {%- if next == size -%}
           {%- set next = 0 -%}
       {%- endif -%}
-      <a href="{{ sorted[previous].link }}" class="previous">
+      <a href="{{ sorted[previous].link | url }}" class="previous">
       <span></span>
       {{ sorted[previous].name }} / {{ sorted[previous].year }}
       </a>
-      <a href="{{ sorted[next].link }}" class="next">
+      <a href="{{ sorted[next].link | url }}" class="next">
       <span></span>
       {{ sorted[next].name }} / {{ sorted[next].year }}
       </a>
