@@ -10,7 +10,7 @@ export class SvgProcessor implements Processor {
   private toDelete = new Set<string>()
 
   async process(document: Document) {
-    const elements = [document.querySelector('[type="image/svg+xml"]'), ...document.querySelectorAll('svg use')]
+    const elements = [document.querySelector<HTMLLinkElement>('[type="image/svg+xml"]'), ...document.querySelectorAll<HTMLLinkElement>('svg use')]
     for (const element of elements) {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const url = await this.hitCacheOr(document, document.getAbsolutePath(element.getAttribute('href')!))
