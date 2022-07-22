@@ -1,12 +1,10 @@
-import path from 'path'
 import markdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
-import pictureAsset from './modules/pictureAsset'
-import groupByYear from './modules/groupByYear'
-import dimensions from './modules/dimensions'
+import groupByYear from './modules/eleventy/groupByYear'
+import dimensions from './modules/eleventy/dimensions'
 global.pathPrefix = process.env.PATH_PREFIX || '/'
 
-import { vite, viteUrl, bootVite } from './modules/vite'
+import { vite, viteUrl, bootVite } from './modules/eleventy/vite'
 
 module.exports = function (eleventyConfig) {
   const pathPrefix = global.pathPrefix
@@ -22,7 +20,7 @@ module.exports = function (eleventyConfig) {
     permalink: true,
   })
   eleventyConfig.setLibrary('md', engine)
-  eleventyConfig.addNunjucksAsyncShortcode('pictureAsset', pictureAsset)
+  //eleventyConfig.addNunjucksAsyncShortcode('pictureAsset', pictureAsset)
   eleventyConfig.addNunjucksFilter('groupByYear', groupByYear)
   //eleventyConfig.addNunjucksFilter('url', url)
   eleventyConfig.addNunjucksShortcode('vite', vite)
@@ -33,20 +31,6 @@ module.exports = function (eleventyConfig) {
     console.log(...args)
     debugger
     return args
-  })
-  eleventyConfig.setBrowserSyncConfig({
-    https: false,
-    host: process.env.HOST || '127.0.0.1',
-    ghostMode: true,
-    snippet: true,
-    snippetOptions: {
-      rule: {
-        match: /<\/head>/i,
-        fn: function (snippet, match) {
-          return snippet + match
-        },
-      },
-    },
   })
   eleventyConfig.addGlobalData('pathPrefix', pathPrefix)
   return {

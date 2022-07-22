@@ -6,7 +6,7 @@ title: Portfolio
 {%- for item in portfolio -%}
   <div class="portfolio-item">
     <a href="{{ item.link | url }}">
-      {%- pictureAsset "/assets/images/portfolio/" + item.images[0].src, { alt: item.name + " serie" } -%}
+      <img src="/assets/images/portfolio/{{ item.images[0].src }}" alt="{{ item.name }} serie" />
     </a>
     <div>
       <h2 class="title"><a href="{{ item.link | url }} ">{{ item.name }}</a></h2>

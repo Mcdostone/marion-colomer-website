@@ -11,7 +11,7 @@ css: ['/assets/css/gallery.css']
         {%- set urlImage= "/assets/images/portfolio/" + image.src -%}
         {%- set dimensions = urlImage | dimensions -%}
         <a aria-label="Open the image" href="{{urlImage | url}}" data-pswp-width="{{ dimensions[0] }}" data-pswp-height="{{ dimensions[1] }}">
-        {%- pictureAsset urlImage, {alt: image.alt, loading: "lazy"}  -%}
+        <img src="{{ urlImage }}" alt="{{ image.alt }}" loading="lazy" />
         </a>
       {%- endfor -%}
     </div>
