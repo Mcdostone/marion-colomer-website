@@ -2,6 +2,8 @@
 .PHONY: help clean build deploy
 NPROC := $(shell nproc)
 HOST ?= 127.0.0.1 ## test
+SUBPATH ?= /
+
 
 node_modules:
 	npm install
@@ -9,7 +11,7 @@ node_modules:
 _site: clean node_modules
 	npm run eleventy
 	npm run vite
-	npx ts-node modules/build/post-processor.ts _site/
+	npx ts-node modules/build/post-processor.ts _site/ $(SUBPATH)
 
 %:
 	npm run $*

@@ -6,6 +6,7 @@ import { Document } from './document'
 import { ViteProcessor } from './vite-processor'
 import { HtmlProcessor } from './html-processor'
 import { Processor } from './processor'
+import { SubpathProcessor } from './subpath-processor'
 
 class PostProcessor implements Processor {
   constructor(private readonly rootDirectory, private readonly modules: Processor[]) {}
@@ -48,11 +49,19 @@ class PostProcessor implements Processor {
 async function start() {
   const viteManifestPath = path.resolve(process.argv[1], '../../../_site/manifest.json')
   const manifest = await fs.readFile(viteManifestPath, 'utf8').then(JSON.parse)
-  const modules = [new ImageProcessor(), new SvgProcessor(), new ViteProcessor(manifest, viteManifestPath), new HtmlProcessor()]
+  const root = path.resolve(process.argv[2])
+  const subPath = process.argv[3] || '/'
+  const modules = [new ImageProcessor(), new SvgProcessor(), new ViteProcessor(manifest, viteManifestPath), new SubpathProcessor(subPath), new HtmlProcessor()]
 
-  const processor = new PostProcessor(path.resolve(process.argv[2]), modules)
+  const processor = new PostProcessor(root, modules)
   await processor.run()
   await processor.finish()
+  if (subPath !== '/') {
+    const temporary = path.resolve(root, '..', '__site')
+    await fs.rename(root, temporary)
+    await fs.mkdir(root, { recursive: true })
+    await fs.rename(temporary, path.join(root, subPath))
+  }
 }
 
 // eslint-disable-next-line unicorn/prefer-top-level-await

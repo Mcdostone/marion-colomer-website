@@ -5,8 +5,15 @@ import Image from '@11ty/eleventy-img'
 import { Document } from './document'
 import { Processor } from './processor'
 
+interface ImageData {
+  input: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any
+  html: string
+}
+
 export class ImageProcessor implements Processor {
-  private cache = new Map<string, { data: Record<any, any>; html: string }>()
+  private cache = new Map<string, ImageData>()
   private toDelete = new Set<string>()
 
   async getPrimaryColor(file: string) {
@@ -45,15 +52,15 @@ export class ImageProcessor implements Processor {
   async hitCacheOr(document: Document, image: HTMLImageElement): Promise<string> {
     const imagePath = document.getAbsolutePath(image.src)
     if (!this.cache.has(imagePath)) {
-      const { input, data, html } = await this.optimize(document, image)
-      this.toDelete.add(input)
-      this.cache = this.cache.set(input, { data, html })
+      const data = await this.optimize(document, image)
+      this.toDelete.add(data.input)
+      this.cache = this.cache.set(data.input, data)
     }
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return this.cache.get(imagePath)!.html
   }
 
-  async optimize(document: Document, image: HTMLImageElement) {
+  async optimize(document: Document, image: HTMLImageElement): Promise<ImageData> {
     // eslint-disable-next-line unicorn/no-array-reduce
     const options = image.getAttributeNames().reduce((accumulator, name) => {
       return { ...accumulator, [name]: image.getAttribute(name) }

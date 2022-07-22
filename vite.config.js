@@ -5,10 +5,10 @@ import { terser } from 'rollup-plugin-terser'
 
 export default async ({ mode }) => {
   const entries = new Map([
-    ['js/gallery', path.resolve('src/assets/js/gallery.js')],
-    ['js/turbo', path.resolve('src/assets/js/turbo.js')],
-    ['css/style', path.resolve('src/assets/css/style.css')],
-    ['css/gallery', path.resolve('src/assets/css/gallery.css')],
+    ['assets/js/gallery', path.resolve('src/assets/js/gallery.js')],
+    ['assets/js/turbo', path.resolve('src/assets/js/turbo.js')],
+    ['assets/css/style', path.resolve('src/assets/css/style.css')],
+    ['assets/css/gallery', path.resolve('src/assets/css/gallery.css')],
   ])
   const isProduction = mode === 'production'
   const dirname = path.dirname(fileURLToPath(import.meta.url))
