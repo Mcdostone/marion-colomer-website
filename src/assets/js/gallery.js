@@ -36,7 +36,7 @@ function initGallery() {
   gallery.init()
 }
 
-document.addEventListener('turbo:before-render', (event) => {
+document.addEventListener('turbo:before-render', () => {
   if (gallery !== undefined) {
     gallery.destroy()
     gallery = undefined

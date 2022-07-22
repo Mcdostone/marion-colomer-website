@@ -3,6 +3,11 @@
 type ServeStaticOptions = import('serve-static').ServeStaticOptions
 
 interface Template {
+  ctx: {
+    eleventy: {
+      pathPrefix: string
+    }
+  }
   page: Page
 }
 
@@ -12,7 +17,7 @@ interface Dict<T = unknown> {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type AnyFunction<T = any> = (...args: any[]) => T
+type AnyFunction<T = any> = (...arguments_: any[]) => T
 
 // ---- Eleventy types
 interface BrowserSyncConfig {
@@ -107,7 +112,7 @@ export interface Page {
     */
   fileSlug: string
   /** the full path to the output file to be written for this content */
-  outputPath: string
+  outputPath: string | boolean
   /** url used to link to this piece of content. */
   url: string
   /**
@@ -161,11 +166,11 @@ export interface EleventyClass {
   data?: () => {
     excludeFromEleventyCollections?: boolean
     standalonePage?: boolean
-    permalink?: (...args: unknown[]) => Raw
+    permalink?: (...arguments_: unknown[]) => Raw
     [key: string]: unknown
   }
 
-  render(...args: unknown[]): Raw
+  render(...arguments_: unknown[]): Raw
 }
 
 export interface Config {
@@ -261,21 +266,25 @@ export interface Config {
   addJavascriptShortcode(name: string, shortcode: AnyFunction<string>): void
   addPairedShortcode(
     name: string,
-    shortcode: (content: string, args: string) => string
+    shortcode: (content: string, arguments_: string) => string
     //shortcode: <A>(content: string, ...args: A[] | string) => string,
   ): void
 
-  addJavaScriptFunction(name: string, fn: AnyFunction<string>): void
+  addJavaScriptFunction(name: string, function_: AnyFunction<string>): void
 
-  addLiquidFilter(name: string, filter: <A>(...args: A[]) => unknown): Record<string, unknown>
+  addLiquidFilter(name: string, filter: <A>(...arguments_: A[]) => unknown): Record<string, unknown>
 
-  addNunjucksFilter(name: string, filter: <A>(...args: A[]) => unknown): void
+  addNunjucksFilter(name: string, filter: <A>(...arguments_: A[]) => unknown): void
 
-  addNunjucksAsyncFilter(name: string, filter: <T>(value: T, callback: <E, R>(err: E | null, res: R) => unknown) => void): void
-  addNunjucksAsyncFilter(name: string, filter: <T, U>(value1: T, value2: U, callback: <E, R>(err: E | null, res: R) => unknown) => void): void
-  addNunjucksAsyncFilter(name: string, filter: <T, U, V>(value1: T, value2: U, value3: V, callback: <E, R>(err: E | null, res: R) => unknown) => void): void
+  addNunjucksAsyncFilter(name: string, filter: <T>(value: T, callback: <E, R>(error: E | null, response: R) => unknown) => void): void
+  addNunjucksAsyncFilter(name: string, filter: <T, U>(value1: T, value2: U, callback: <E, R>(error: E | null, response: R) => unknown) => void): void
+  addNunjucksAsyncFilter(
+    name: string,
+    filter: <T, U, V>(value1: T, value2: U, value3: V, callback: <E, R>(error: E | null, response: R) => unknown) => void
+  ): void
 
   addHandlebarsHelper(name: string, helper: AnyFunction<string>): Record<string, unknown>
+  addGlobalData(name: string, sstring)
 
   /**
      Plugins are custom code that Eleventy can import into a project from an external
@@ -287,7 +296,7 @@ export interface Config {
         plugin’s documentation (e.g. the [eleventy-plugin-syntaxhighlight README](https://github.com/11ty/eleventy-plugin-syntaxhighlight/blob/master/README.md))
         to learn what options are available to you.
    */
-  addPlugin<F extends AnyFunction>(fn: F, config?: Parameters<F>[0]): void
+  addPlugin<F extends AnyFunction>(function_: F, config?: Parameters<F>[0]): void
 
   /**
      Searching the entire directory structure for files to copy based on file extensions
@@ -330,6 +339,7 @@ export interface Config {
   setDataDeepMerge(to: boolean): void
   setWatchJavaScriptDependencies(to: boolean): void
   setBrowserSyncConfig(to: BrowserSyncConfig): void
+  setServerOptions(to: { showAllHosts: boolean }): void
   setFrontMatterParsingOptions(to: { excerpt?: boolean; excerpt_separator?: string; excerpt_alias?: string; engines?: Dict<Engine> }): void
   setLibrary(to: EngineName, using: Renderer): void
 }

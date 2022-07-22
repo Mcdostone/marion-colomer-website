@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import path from 'node:path'
-import fg from 'fast-glob'
 import { fileURLToPath } from 'node:url'
 import { terser } from 'rollup-plugin-terser'
 

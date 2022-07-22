@@ -6,7 +6,7 @@ import { Document } from './document'
 import { Processor } from './processor'
 
 export class ImageProcessor implements Processor {
-  private cache = new Map<string, { data: Record<any, any>, html: string}>()
+  private cache = new Map<string, { data: Record<any, any>; html: string }>()
   private toDelete = new Set<string>()
 
   async getPrimaryColor(file: string) {
@@ -50,7 +50,7 @@ export class ImageProcessor implements Processor {
       this.cache = this.cache.set(input, { data, html })
     }
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    return this.cache.get(imagePath)?.html!
+    return this.cache.get(imagePath)!.html
   }
 
   async optimize(document: Document, image: HTMLImageElement) {

@@ -1,11 +1,12 @@
 import markdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
-import groupByYear from './modules/eleventy/groupByYear'
+import groupByYear from './modules/eleventy/group-by-year'
 import dimensions from './modules/eleventy/dimensions'
 global.pathPrefix = process.env.PATH_PREFIX || '/'
 
 import { vite, viteUrl, bootVite } from './modules/eleventy/vite'
 
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = function (eleventyConfig) {
   const pathPrefix = global.pathPrefix
   eleventyConfig.setTemplateFormats(['md', 'html', 'njk'])
@@ -15,7 +16,7 @@ module.exports = function (eleventyConfig) {
     html: true,
   }).use(markdownItAnchor, {
     level: [1, 2, 3],
-    permalinkAttrs: (_) => ({ 'aria-label': 'permalink' }),
+    permalinkAttrs: () => ({ 'aria-label': 'permalink' }),
     permalinkSymbol: '',
     permalink: true,
   })
@@ -27,11 +28,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksShortcode('viteUrl', viteUrl)
   eleventyConfig.addNunjucksShortcode('bootVite', bootVite)
   eleventyConfig.addNunjucksFilter('dimensions', dimensions)
-  eleventyConfig.addFilter('debugger', (...args) => {
-    console.log(...args)
-    debugger
-    return args
-  })
   eleventyConfig.addGlobalData('pathPrefix', pathPrefix)
   return {
     dir: {

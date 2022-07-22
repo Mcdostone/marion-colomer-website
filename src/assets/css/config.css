@@ -48,7 +48,7 @@ img {
 picture {
   display: inline-block;
   width: 100%;
-  background: var(--pc, rgb(241, 241, 241))
+  background: var(--pc, rgb(241 241 241))
 }
 
 .turbo-progress-bar {

@@ -29,6 +29,7 @@
     "@11ty/eleventy": "^v2.0.0-canary.13",
     "@11ty/eleventy-img": "^2.0.1",
     "@squoosh/cli": "^0.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
     "autoprefixer": "^10.4.7",
     "colorthief": "^2.3.2",
     "eslint": "^8.20.0",
@@ -55,6 +56,10 @@
     "typescript": "^4.7.4",
     "vite": "^3.0.2"
   },
+  "dependencies": {
+    "@hotwired/turbo": "^7.1.0",
+    "photoswipe": "^5.2.8"
+  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "plugins": [
@@ -63,23 +68,46 @@
     "rules": {
       "declaration-block-no-redundant-longhand-properties": true,
       "declaration-block-trailing-semicolon": "never",
+      "comment-empty-line-before": "never",
       "prettier/prettier": true,
       "selector-class-pattern": "^(([a-z][a-z0-9]*)(-[a-z0-9]+)*|pswp.*)$"
     }
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:unicorn/recommended"
+    ],
+    "globals": {
+      "globalThis": false
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "ignorePatterns": [
+      "_site",
+      "node_modules/*"
+    ]
   },
   "prettier": {
     "printWidth": 160,
     "semi": false,
     "singleQuote": true
   },
-  "eslintConfig": {
-    "extends": "plugin:unicorn/recommended"
-  },
-  "dependencies": {
-    "@hotwired/turbo": "^7.1.0",
-    "photoswipe": "^5.2.8"
-  },
   "volta": {
     "node": "16.16.0"
+  },
+  "htmlnano": {
+    "preset": "safe"
   }
 }
