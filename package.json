@@ -28,7 +28,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^v2.0.0-canary.13",
     "@11ty/eleventy-img": "^2.0.1",
-    "@squoosh/cli": "^0.7.2",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "autoprefixer": "^10.4.7",
     "colorthief": "^2.3.2",
@@ -42,7 +41,6 @@
     "markdown-it-anchor": "^8.6.4",
     "nodemon": "^2.0.19",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.6.2",
     "postcss": "^8.4.14",
     "postcss-import-url": "^7.0.0",
     "prettier": "^2.7.1",

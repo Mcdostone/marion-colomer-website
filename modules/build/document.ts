@@ -5,7 +5,7 @@ import path from 'node:path'
 export class Document {
   root: JSDOM
 
-  constructor(readonly rootDirectory, readonly documentPath: string) {
+  constructor(readonly rootDirectory, readonly documentPath: string, readonly baseUrl: string = '/') {
     this.root = new JSDOM()
   }
 
@@ -14,12 +14,12 @@ export class Document {
     return this
   }
 
-  querySelector(query) {
-    return this.root.window.document.querySelector(query) as HTMLElement
+  querySelector<T>(query) {
+    return this.root.window.document.querySelector(query) as T
   }
 
-  querySelectorAll(query) {
-    return this.root.window.document.querySelectorAll(query) as NodeListOf<HTMLElement>
+  querySelectorAll<T extends Node>(query) {
+    return this.root.window.document.querySelectorAll(query) as NodeListOf<T>
   }
 
   createRange() {
@@ -35,6 +35,6 @@ export class Document {
   }
 
   getUrl(itemPath) {
-    return path.join('/', path.relative(this.rootDirectory, itemPath))
+    return path.join(this.baseUrl, path.relative(this.rootDirectory, itemPath))
   }
 }

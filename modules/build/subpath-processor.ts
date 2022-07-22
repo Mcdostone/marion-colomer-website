@@ -3,20 +3,19 @@ import { Document } from './document'
 import { Processor } from './processor'
 
 export class SubpathProcessor implements Processor {
-  constructor(private readonly subPath: string) {}
-
   async process(document: Document) {
-    for (const element of [...document.querySelectorAll('[src]')] as HTMLScriptElement[]) {
-      element.src = this.getNewPath(element.src)
+    for (const element of [...document.querySelectorAll('body [src]')] as HTMLScriptElement[]) {
+      if (element.tagName !== 'IMG') {
+        element.src = this.getNewPath(element.src, document.baseUrl)
+      }
     }
-    for (const element of [...document.querySelectorAll('[href]')] as HTMLAnchorElement[]) {
-      element.href = this.getNewPath(element.href)
+    for (const element of [...document.querySelectorAll('body [href]:not([data-pswp-width])')] as HTMLAnchorElement[]) {
+      element.href = this.getNewPath(element.href, document.baseUrl)
     }
   }
 
-  getNewPath(url: string) {
-    const ok = url.startsWith('/') ? path.join('/', this.subPath, url) : url
-    return ok
+  getNewPath(url: string, baseUrl: string) {
+    return url.startsWith('/') ? path.join(baseUrl, url) : url
   }
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function

@@ -74,10 +74,10 @@ export class ImageProcessor implements Processor {
       delete options['class']
     }
     const metadata = await Image(imagePath, {
-      formats: ['avif', 'jpeg'],
+      formats: ['jpeg'],
       outputDir: path.resolve(path.dirname(imagePath)),
       urlPath: path.dirname(document.getUrl(imagePath)),
-      filenameFormat: function (id, source, width, format) {
+      filenameFormat: function (id: string, source: string, width: number, format: string) {
         const extension = path.extname(source)
         const name = path.basename(source, extension)
         return `${name}-${id}.${format}`
@@ -89,8 +89,7 @@ export class ImageProcessor implements Processor {
       decoding: 'async',
     }
     const markup = await Image.generateHTML(metadata, imageAttributes)
-    const found = markup.match(/src="(.*\.jpeg)"/)[1]
-    const primaryColor = await this.getPrimaryColor(document.getAbsolutePath(found))
+    const primaryColor = await this.getPrimaryColor(metadata.jpeg[0].outputPath)
     if (primaryColor !== '') {
       containerOptions['style'] = [containerOptions['style'], `--pc: ${primaryColor}`].filter((s) => s !== undefined).join(';')
     }

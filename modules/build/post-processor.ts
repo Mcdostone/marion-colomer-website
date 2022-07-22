@@ -9,7 +9,7 @@ import { Processor } from './processor'
 import { SubpathProcessor } from './subpath-processor'
 
 class PostProcessor implements Processor {
-  constructor(private readonly rootDirectory, private readonly modules: Processor[]) {}
+  constructor(private readonly rootDirectory, private readonly modules: Processor[], private readonly baseUrl: string = '/') {}
 
   async run() {
     await this.walk(this.rootDirectory)
@@ -28,7 +28,7 @@ class PostProcessor implements Processor {
       switch (path.extname(itemPath)) {
         case '.html':
           // eslint-disable-next-line no-case-declarations
-          const document = await new Document(this.rootDirectory, itemPath).load()
+          const document = await new Document(this.rootDirectory, itemPath, this.baseUrl).load()
           await this.process(document)
           break
       }
@@ -50,17 +50,17 @@ async function start() {
   const viteManifestPath = path.resolve(process.argv[1], '../../../_site/manifest.json')
   const manifest = await fs.readFile(viteManifestPath, 'utf8').then(JSON.parse)
   const root = path.resolve(process.argv[2])
-  const subPath = process.argv[3] || '/'
-  const modules = [new ImageProcessor(), new SvgProcessor(), new ViteProcessor(manifest, viteManifestPath), new SubpathProcessor(subPath), new HtmlProcessor()]
+  const baseUrl = process.argv[3] || '/'
+  const modules = [new ImageProcessor(), new SvgProcessor(), new ViteProcessor(manifest, viteManifestPath), new SubpathProcessor(), new HtmlProcessor()]
 
-  const processor = new PostProcessor(root, modules)
+  const processor = new PostProcessor(root, modules, baseUrl)
   await processor.run()
   await processor.finish()
-  if (subPath !== '/') {
+  if (baseUrl !== '/') {
     const temporary = path.resolve(root, '..', '__site')
     await fs.rename(root, temporary)
     await fs.mkdir(root, { recursive: true })
-    await fs.rename(temporary, path.join(root, subPath))
+    await fs.rename(temporary, path.join(root, baseUrl))
   }
 }
 
