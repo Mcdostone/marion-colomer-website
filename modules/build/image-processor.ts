@@ -74,7 +74,7 @@ export class ImageProcessor implements Processor {
       delete options['class']
     }
     const metadata = await Image(imagePath, {
-      formats: ['jpeg'],
+      formats: ['jpeg', 'avif'],
       outputDir: path.resolve(path.dirname(imagePath)),
       urlPath: path.dirname(document.getUrl(imagePath)),
       filenameFormat: function (id: string, source: string, width: number, format: string) {
