@@ -28,7 +28,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^v2.0.0-canary.13",
     "@11ty/eleventy-img": "^2.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.36.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
     "autoprefixer": "^10.4.8",
     "colorthief": "^2.3.2",
     "eslint": "^8.23.0",
