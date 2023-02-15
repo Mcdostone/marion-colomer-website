@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/Mcdostone/marion-colomer-website",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.1",
-    "@11ty/eleventy-img": "^2.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-img": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
     "autoprefixer": "^10.4.13",
-    "eslint": "^8.32.0",
+    "eslint": "^8.34.0",
     "eslint-plugin-unicorn": "^45.0.2",
     "fast-average-color-node": "^2.6.0",
     "fast-glob": "^3.2.12",
@@ -43,20 +43,20 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "postcss-import-url": "^7.2.0",
-    "prettier": "^2.8.3",
+    "prettier": "^2.8.4",
     "rollup-plugin-terser": "^7.0.2",
-    "stylelint": "^14.16.1",
-    "stylelint-config-standard": "^29.0.0",
+    "stylelint": "^15.1.0",
+    "stylelint-config-standard": "^30.0.1",
     "stylelint-prettier": "^2.0.0",
     "svgo": "^3.0.2",
-    "terser": "^5.16.1",
+    "terser": "^5.16.3",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4",
+    "typescript": "^4.9.5",
     "vite": "^3.2.5"
   },
   "dependencies": {
-    "@hotwired/turbo": "^7.2.4",
-    "photoswipe": "^5.3.4"
+    "@hotwired/turbo": "^7.2.5",
+    "photoswipe": "^5.3.5"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
