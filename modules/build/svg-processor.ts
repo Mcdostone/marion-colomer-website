@@ -38,7 +38,6 @@ export class SvgProcessor implements Processor {
           name: 'preset-default',
           params: {
             overrides: {
-              cleanupIDs: false,
               removeUselessDefs: false,
             },
           },

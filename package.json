@@ -103,7 +103,7 @@
     "singleQuote": true
   },
   "volta": {
-    "node": "16.13.0"
+    "node": "18.17.0"
   },
   "htmlnano": {
     "preset": "safe"
